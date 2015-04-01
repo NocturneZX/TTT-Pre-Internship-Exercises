@@ -1,0 +1,168 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww16800\viewh8800\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 TurnToTech Week 03 class 02					Feb. 17, 2015\
+Project example files:
+\b0  build your own app\
+
+\b Lecture files: 
+\b0 watch video: {\field{\*\fldinst{HYPERLINK "https://plus.google.com/u/0/+OrenGoldberg1/posts/DHCFK4fWAqN"}}{\fldrslt https://plus.google.com/u/0/+OrenGoldberg1/posts/DHCFK4fWAqN}}\
+peers: Harteg, Lance, Robert\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f1 \cf0 \
+{\field{\*\fldinst{HYPERLINK "http://exercism.io/"}}{\fldrslt http://exercism.io/}} - test code and do small projects that the crowd checks\
+\
+
+\b App functionality
+\b0 \
+first view\
+4 companies - Apple, Samsung, Google, Microsoft\
+network request**\
+- stock data (last thing)\
+\
+second view\
+products name and images\
+\
+third view\
+\
+priority\
+- navigation\
+- changing screens with different products / company\
+- add images (icons)\
+- swipe left to enable delete of products\
+- persistence\
+- click on a product - brings in third view of website (webview - corresponding with product)\
+\
+\
+
+\b What goes into a well architected product?
+\b0 \
+- wireframes, draw out the views\
+	- tools for this: proto-IO, Flint-O, Balsamic\
+	- pen/paper or photoshop\
+	- different from \'91autoview\'92\
+- in this case we have a working prototype\
+\
+
+\b Nav contoller -> Table View -> Table View
+\b0 \
+- switching from one view to another view\
+\
+\
+
+\b Data Model?
+\b0 \
+\
+What are the classes we need for this project?\
+- Company\
+	- name / company ID	: var companyId:Int?\
+	- array of products		: var name:String?\
+	- instance variable for a property - hold stock price		: var products = [Products]() - defined, empty array\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 	- ticker symbol?		: var stockSymbo:String?\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 	- method to get / store the image file	: var stockPrice:String?\
+	- miage:			: var image:String?\
+- the init() doesn\'92t have any args b/c the above are all optionals and products is an empty defined array\
+- hard coding the number of companies for now..\
+- where will the (hard-coded) company names come from?\
+\
+
+\b design pattern:
+\b0  
+\i\b Data Access Object
+\i0\b0  - a way to abstract the data source away from the models.. only the DAO knows where the data is coming from and it constructs objects that get used by the models.. the models will not have any idea where it\'92s coming from\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \
+MVC + DAO\
+\
+DAO - gets data from data source (manual entry, database, internet, some feed.. etc.), creates the data objects as defined by the Model Classes\
+- passes the Data objects to the Controller classes\
+- Controller updates the View classes\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 if you need to change your data source (from a database to a web to whatever) then having the DAO for abstracting your data so that the view controller doesn\'92t need to be updated.  The data (array) is passed from Model to DAO to View Controller to View\
+\
+DAO retrieves info from the data source (DB or Internet or manual input.. etc) and then creates the Data Objects (Models)..\
+This is instead of having the controller get the data (from the source).. \
+\
+- Products - all of these will have similar properties, just different values\
+	- id:Int		// self id\
+	- name:String?\
+	- image\
+	- url:String?\
+	- foreign key: the connection between the product(s) and the company ID\
+		- 
+\b companyID:Int
+\b0 ?	// associated company\
+- the product init()\
+- google I feel lucky - takes you to the top hit of results\
+	\
+\
+DataInit - this is the DAO\
+- creates private vars for: companies (array) and a products (array)\
+- on init - self.createDefaultCompaniesAndProducts()\
+		self.addProductsToCompanies()\
+methods\
+- getCompanies() -> Array<Company> \{\
+  return self.companies\
+\}\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 // if the data source were to change, this is the only function that would need to change
+\b0 \
+createDefaultCompaniesAndProducts() \{\
+var apple: Company = Company()\
+apple.name = \'93pple\'94\
+apple.stockSymbol = \'93\'94\
+apple.companyID = 1\
+\
+\'85\
+\
+sefl.companies = [apple, samsun, mozilla, microsoft]\
+\
+var ipod: Product = Product(id:1, name?\'94iPod\'94)\
+ipod.companyID = 1\
+self.products.appent(ipod)\
+\
+\
+func addProductstToCompanies() \{\
+for product in self.products \{\
+   for company in self.companies \{\
+ if (product.companyID == company.companyID) \{\
+  company.products.append(product)\
+  break\
+\}\
+\}\
+\}\
+\
+This will be refactored to use core data.\
+\
+So far, we have Company Model, Product Model, DAO.\
+\
+
+\b ViewControllers
+\b0 \
+- has TableViews\
+import UIKit\
+clas companyViewcontroller: UIViewController, etc.. allows us to have tableView and network connection\
+\
+Table View - is being used inside the ViewController, not using a Table View Controller\
+viewDidLoad() - built in callback method that can be customized\
+\
+ProductViewController - \
+reloadData() - specific for tableViews - when you change data in a table view, it doesn\'92t necessarily show you that change immediately.. so this updates the view for you. Gets the view and model in sync for you otherwise the view will be showing old data.\
+\
+
+\b Swift with Cocoa Touch - ibook\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 Xcode shortcuts\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+{\field{\*\fldinst{HYPERLINK "https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/xcode_help-command_shortcuts/MenuCommands/MenuCommands014.html"}}{\fldrslt \cf0 https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/xcode_help-command_shortcuts/MenuCommands/MenuCommands014.html}}}

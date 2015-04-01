@@ -1,0 +1,104 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red43\green131\blue159;\red163\green21\blue21;
+}
+\margl1440\margr1440\vieww12060\viewh12800\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+{\field{\*\fldinst{HYPERLINK "http://justcode.turntotech.io:8080/TurnToTechOnline/jsp/public/modules.jsp?course_index=1"}}{\fldrslt 
+\f0\fs24 \cf0 http://justcode.turntotech.io:8080/TurnToTechOnline/jsp/public/modules.jsp?course_index=1}}
+\f0\fs24 \
+login: gmail\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 TurnToTech Week 02 class 01					Feb. 03, 2015\
+Project example files: 
+\b0 Class 3.xcodeproj \
+
+\b Lecture files:
+\b0  Week2-Class4-1-SwiftStandardLibraryReference.pdf\
+peers: Harteg, Robert, Lance\
+\
+SwiftStandarLibraries (Week2-Class4-1-SwiftStandardLibraryReference.pdf)\
+- Obj-C still accessible\
+	- ie: immutable array vs. mutable array Obj-C, \'91let\'92 or \'91var\'92 in Swift\
+\
+
+\b Arrays and Dictionaries 
+\b0 (Week2-Class4-1-Collections-Sample.playground)\
+class lets you create a custom type\
+\
+- Employee class extends Person class\
+- 
+\f1\fs22 \cf2 \CocoaLigature0 var\cf0  somebody:\cf3 AnyObject\cf0 ? 
+\f0\fs24 \CocoaLigature1 -
+\f1\fs22 \CocoaLigature0  
+\f0\fs24 \CocoaLigature1 any object type can be assigned (based on the typing)\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf2 \CocoaLigature0 if\cf0  \cf3 somebody\cf0  \cf2 is\cf0  \cf3 Employee\cf0  \{\
+    \
+    \cf3 println\cf0 (\cf4 "an employee"\cf0 )\
+    \
+\} \cf2 else\cf0  \{\
+    \
+    \cf3 println\cf0 (\cf4 "not an employee"\cf0 )\
+    \
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 use case: you get an object, but you don\'92t know what type it is.. the code comes from somewhere else\
+\
+Array:\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf2 \CocoaLigature0 var\cf0  personArray = [\cf3 nyGuy\cf0 , \cf3 caGuy\cf0 , \cf3 tc\cf0 ]\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 - deduced automatically Person, Person\
+\
+get console output: view -> Assistant editor -> show\
+\
+** programming in general.. looking at different patterns, and learning to recognize them\
+- loop thru array to iterate\
+\
+\
+Dictionary - collection: list of items w/ a name \'93key\'94 and value\
+look at the working example\
+\
+aka hash table\
+** important: when you iterate thru a dictionary, the order is not the order in which the key and values were added.. \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 xCode project: 
+\b0 Week2-Class4-3-StdLibrary-iTunesSearchSample -> Class 4.xcodeproj\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf2 \CocoaLigature0 class\cf0  ViewController: \cf3 UIViewController\cf0 ,  \cf3 UITableViewDelegate\cf0 , \cf3 UITableViewDataSource\cf0  \{\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 superclass, protocol, protocol\
+\
+focus on closures, dictionaries, arrays\
+\
+This class: NSURLConnection lets you make an asyc network connection\
+\
+teh response comes back in a closure!\
+returns a json object\
+parses the json object into an array\
+created a dictionary fromt he array\
+\
+sorts the dictionary\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Exercise:
+\b0 \
+try to write the counting exercise.. look at it a few times and write it out\
+
+\b have an array, put the info into a table, with a count of how many times an array item exists
+\b0 \
+\
+}

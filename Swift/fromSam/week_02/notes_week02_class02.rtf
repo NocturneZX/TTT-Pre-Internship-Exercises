@@ -1,0 +1,150 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+\f3\fnil\fcharset0 Menlo-BoldItalic;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;\red43\green131\blue159;\red0\green128\blue0;
+\red163\green21\blue21;}
+\margl1440\margr1440\vieww12060\viewh12800\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+{\field{\*\fldinst{HYPERLINK "http://justcode.turntotech.io:8080/TurnToTechOnline/jsp/public/modules.jsp?course_index=1"}}{\fldrslt 
+\f0\fs24 \cf0 http://justcode.turntotech.io:8080/TurnToTechOnline/jsp/public/modules.jsp?course_index=1}}
+\f0\fs24 \
+login: gmail\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 TurnToTech Week 02 class 02					Feb. 05, 2015\
+Project example files: 
+\b0 Class 3.xcodeproj \
+
+\b Lecture files:
+\b0  Class-5.pdf\
+peers: Harteg, Robert, Lance\
+\
+
+\b Memory management\
+ibook
+\b0 : automatic reference counting Chapter to read\
+\
+Nothing wrong w/ using more memory - might be hardware limitations\
+Not every memory problem is a problem, but b/c the phones and ipads are low powered and don\'92t have that much memory you need to pay attention to this stuff.\
+\
+Clean up unused objects.\
+\
+balance between loading everything in memory vs. loading things on the fly.\
+\
+example: loading all the contacts in a phonebook\
+	- freezing up if too many contacts\
+- asynchronous loading implementation \
+- tables that load on the fly - there are open source solutions\
+\
+Classes are negligible memory, but\'85\
+Each object has memory once you start creating all of them\
+\
+a loop that creates objects can be the primary reason for memory issues\
+\
+common problem: creating a number of objects, but not knowing how to keep track of which ones are not needed (and clean them up)\
+\
+How to solve this?\
+	side note: Scope \
+	don\'92t use global variables\
+	except if there\'92s a file from which the application needs to read from - differnt parts of the app may need access to it so it could be global.. or maybe a password.\
+\
+** deinit \{\
+//	special function that gets called when an object gets cleaned up (goes out of scope)\
+	// if you don\'92t call it, it still happens, if you explicitly call it - you can still perform some additional custom stuff before it is cleaned up..\
+	println(\'91dying wish\'92)\
+\}\
+\
+init \{\
+\
+\}\
+\
+// exercise with breakpoints\
+trying to understand what is the scope of \'91singleObject\'92\
+1) the ViewController class has a reference to the object in the form of the variable \'91singleObject\'92\
+2) line 68 func releaseSimpleObject() manually gets rid of the singleObj\
+\
+\
+** why do we need the \'91self\'92 keyword?\
+\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf2 \CocoaLigature0 class\cf0  SimpleClass \{\
+    \
+    \
+    \cf2 var\cf0  simpleClassId:\cf3 Int\cf0 \
+    \
+    \cf2 init\cf0  ( \cf2 var\cf0  simpleClassId:\cf3 Int\cf0 ) \{ // common practice to do this - name the param after the instance var\
+        \
+//        \cf2 self\cf0 .\cf3 simpleClassId\cf0  = \cf3 simpleClassId\cf0 \
+        \cf3 simpleClassId\cf0  = \cf3 simpleClassId // this breaks b/c it gets confused.. assigning it to itself\cf0 \
+        \
+    \}\
+    \
+    \cf2 deinit\cf0  \{\
+        \
+\pard\tx529\pardeftab529\pardirnatural
+\cf4 //        println("Deinitializing class id = \\(simpleClassId)")\
+\pard\tx529\pardeftab529\pardirnatural
+\cf0         \cf3 println\cf0 (\cf5 "my last wish = \cf0 \\(\cf3 simpleClassId\cf0 )\cf5 "\cf0 )\
+        \
+    \}\
+    \
+\}\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 \CocoaLigature1 \
+xCode: cmd + i opens up 
+\b instruments
+\b0 ..or Product -> pofile allows you to view different templates for viewing the profiling data\
+\
+Total Bytes shows memory usage\
+the list shows all the things taking up memory\
+create simple objects, filter instruments by \'91simple\'92 and see how much memory it takes\
+\
+\
+click on the specific object in instruments, click on extended details, the darker font is your own code, the others are framework code.. thsi allows you to see the actual code that that the object was written by\
+you can see which line of code created this object and the percentages tell you what percentage of your apps memory usage is that line of code is responsible for.. will help you narrow down memory management issues.\
+\
+\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 AppPlatform 
+\b0 tied to 
+\f2\b\fs22 \CocoaLigature0 AppProgrammingLanguage\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f1\b0 \cf0 when you release these strong retain cycle objects, they won\'92t deint() b/c they refer to each other.. you can set them to nil, but they remain in memory as memory leaks\
+
+\f2\b This is solved by \'91unowned\'92 keyword prefix for variable
+\f1\b0 \
+Strong is like Retained\
+Weak is like unRetained UI objects are this by default\
+\
+Look in the iBook for references about these things\
+\
+
+\f3\i\b unowned
+\f1\i0\b0  doesn\'92t work for optional, instead you can use 
+\f3\i\b weak
+\f1\i0\b0 \
+to solve the retain cycle objects issue\
+
+\f2\b \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b0\fs24 \cf0 \CocoaLigature1 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Assignment:
+\b0  apartment and renter example in the book for breaking strong retain cycle! Try calling deinit()\
+\
+if the external class object has strong retain cycle reference and the object is deinitialized, \
+\
+A has reference to B, B has reference to A.. ARC system checks to see if each one can \
+\
+
+\b REad the Chapter on Automatic Reference Counting}

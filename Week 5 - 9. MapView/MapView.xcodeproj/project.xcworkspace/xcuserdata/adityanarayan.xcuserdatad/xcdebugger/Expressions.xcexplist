@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[YelpAPIRequest getArrayOfRestaurantsFromTerm:location:completionHandler:]:YelpAPIRequest.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "searchRequest">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[DEMOViewController mapView:viewForAnnotation:]:DEMOViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "annotation">
+            </PersistentString>
+            <PersistentString
+               value = "self.mapView.annotations">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

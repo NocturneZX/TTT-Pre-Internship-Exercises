@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[qcdDAO addProductsToCompaniesUsingSQLite]:qcdDAO.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "strSQLAttach">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[qcdDAO GetCompaniesUsingSQLite]:qcdDAO.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[qcdDAO createOrOpenDBForCompanies]:qcdDAO.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[qcdDAO addProductsToCompanies]:qcdDAO.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "company.CompanyProducts">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[qcdDAO initWithCompaniesAndProductsUsingSQLite]:qcdDAO.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "products ">
+            </PersistentString>
+            <PersistentString
+               value = "sqlite3_column_text(statement, 0)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

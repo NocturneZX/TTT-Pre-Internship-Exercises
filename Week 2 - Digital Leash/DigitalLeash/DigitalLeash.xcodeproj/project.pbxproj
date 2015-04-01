@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DC943591A9CC60500258097 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC943581A9CC60500258097 /* main.m */; };
+		4DC9435C1A9CC60500258097 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9435B1A9CC60500258097 /* AppDelegate.m */; };
+		4DC9435F1A9CC60500258097 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC9435E1A9CC60500258097 /* ViewController.m */; };
+		4DC943621A9CC60500258097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DC943601A9CC60500258097 /* Main.storyboard */; };
+		4DC943641A9CC60500258097 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DC943631A9CC60500258097 /* Images.xcassets */; };
+		4DC943671A9CC60500258097 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DC943651A9CC60500258097 /* LaunchScreen.xib */; };
+		4DC943731A9CC60500258097 /* DigitalLeashTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC943721A9CC60500258097 /* DigitalLeashTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DC9436D1A9CC60500258097 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DC9434B1A9CC60500258097 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DC943521A9CC60500258097;
+			remoteInfo = DigitalLeash;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4DC943531A9CC60500258097 /* DigitalLeash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalLeash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC943571A9CC60500258097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DC943581A9CC60500258097 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4DC9435A1A9CC60500258097 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4DC9435B1A9CC60500258097 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4DC9435D1A9CC60500258097 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4DC9435E1A9CC60500258097 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4DC943611A9CC60500258097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DC943631A9CC60500258097 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4DC943661A9CC60500258097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		4DC9436C1A9CC60500258097 /* DigitalLeashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitalLeashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DC943711A9CC60500258097 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DC943721A9CC60500258097 /* DigitalLeashTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigitalLeashTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DC943501A9CC60500258097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC943691A9CC60500258097 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DC9434A1A9CC60500258097 = {
+			isa = PBXGroup;
+			children = (
+				4DC943551A9CC60500258097 /* DigitalLeash */,
+				4DC9436F1A9CC60500258097 /* DigitalLeashTests */,
+				4DC943541A9CC60500258097 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4DC943541A9CC60500258097 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DC943531A9CC60500258097 /* DigitalLeash.app */,
+				4DC9436C1A9CC60500258097 /* DigitalLeashTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DC943551A9CC60500258097 /* DigitalLeash */ = {
+			isa = PBXGroup;
+			children = (
+				4DC9435A1A9CC60500258097 /* AppDelegate.h */,
+				4DC9435B1A9CC60500258097 /* AppDelegate.m */,
+				4DC9435D1A9CC60500258097 /* ViewController.h */,
+				4DC9435E1A9CC60500258097 /* ViewController.m */,
+				4DC943601A9CC60500258097 /* Main.storyboard */,
+				4DC943631A9CC60500258097 /* Images.xcassets */,
+				4DC943651A9CC60500258097 /* LaunchScreen.xib */,
+				4DC943561A9CC60500258097 /* Supporting Files */,
+			);
+			path = DigitalLeash;
+			sourceTree = "<group>";
+		};
+		4DC943561A9CC60500258097 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DC943571A9CC60500258097 /* Info.plist */,
+				4DC943581A9CC60500258097 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4DC9436F1A9CC60500258097 /* DigitalLeashTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DC943721A9CC60500258097 /* DigitalLeashTests.m */,
+				4DC943701A9CC60500258097 /* Supporting Files */,
+			);
+			path = DigitalLeashTests;
+			sourceTree = "<group>";
+		};
+		4DC943701A9CC60500258097 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4DC943711A9CC60500258097 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DC943521A9CC60500258097 /* DigitalLeash */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DC943761A9CC60500258097 /* Build configuration list for PBXNativeTarget "DigitalLeash" */;
+			buildPhases = (
+				4DC9434F1A9CC60500258097 /* Sources */,
+				4DC943501A9CC60500258097 /* Frameworks */,
+				4DC943511A9CC60500258097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DigitalLeash;
+			productName = DigitalLeash;
+			productReference = 4DC943531A9CC60500258097 /* DigitalLeash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DC9436B1A9CC60500258097 /* DigitalLeashTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DC943791A9CC60500258097 /* Build configuration list for PBXNativeTarget "DigitalLeashTests" */;
+			buildPhases = (
+				4DC943681A9CC60500258097 /* Sources */,
+				4DC943691A9CC60500258097 /* Frameworks */,
+				4DC9436A1A9CC60500258097 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DC9436E1A9CC60500258097 /* PBXTargetDependency */,
+			);
+			name = DigitalLeashTests;
+			productName = DigitalLeashTests;
+			productReference = 4DC9436C1A9CC60500258097 /* DigitalLeashTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DC9434B1A9CC60500258097 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Julio Reyes";
+				TargetAttributes = {
+					4DC943521A9CC60500258097 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					4DC9436B1A9CC60500258097 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 4DC943521A9CC60500258097;
+					};
+				};
+			};
+			buildConfigurationList = 4DC9434E1A9CC60500258097 /* Build configuration list for PBXProject "DigitalLeash" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DC9434A1A9CC60500258097;
+			productRefGroup = 4DC943541A9CC60500258097 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DC943521A9CC60500258097 /* DigitalLeash */,
+				4DC9436B1A9CC60500258097 /* DigitalLeashTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DC943511A9CC60500258097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC943621A9CC60500258097 /* Main.storyboard in Resources */,
+				4DC943671A9CC60500258097 /* LaunchScreen.xib in Resources */,
+				4DC943641A9CC60500258097 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC9436A1A9CC60500258097 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DC9434F1A9CC60500258097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC9435F1A9CC60500258097 /* ViewController.m in Sources */,
+				4DC9435C1A9CC60500258097 /* AppDelegate.m in Sources */,
+				4DC943591A9CC60500258097 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DC943681A9CC60500258097 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DC943731A9CC60500258097 /* DigitalLeashTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DC9436E1A9CC60500258097 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DC943521A9CC60500258097 /* DigitalLeash */;
+			targetProxy = 4DC9436D1A9CC60500258097 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4DC943601A9CC60500258097 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DC943611A9CC60500258097 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4DC943651A9CC60500258097 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DC943661A9CC60500258097 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DC943741A9CC60500258097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4DC943751A9CC60500258097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DC943771A9CC60500258097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DigitalLeash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4DC943781A9CC60500258097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DigitalLeash/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4DC9437A1A9CC60500258097 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DigitalLeashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigitalLeash.app/DigitalLeash";
+			};
+			name = Debug;
+		};
+		4DC9437B1A9CC60500258097 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DigitalLeashTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigitalLeash.app/DigitalLeash";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DC9434E1A9CC60500258097 /* Build configuration list for PBXProject "DigitalLeash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DC943741A9CC60500258097 /* Debug */,
+				4DC943751A9CC60500258097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DC943761A9CC60500258097 /* Build configuration list for PBXNativeTarget "DigitalLeash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DC943771A9CC60500258097 /* Debug */,
+				4DC943781A9CC60500258097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DC943791A9CC60500258097 /* Build configuration list for PBXNativeTarget "DigitalLeashTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DC9437A1A9CC60500258097 /* Debug */,
+				4DC9437B1A9CC60500258097 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DC9434B1A9CC60500258097 /* Project object */;
+}

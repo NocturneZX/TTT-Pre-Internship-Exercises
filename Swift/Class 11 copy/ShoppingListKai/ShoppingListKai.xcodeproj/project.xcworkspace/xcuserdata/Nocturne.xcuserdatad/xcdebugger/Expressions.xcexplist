@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ShoppingList.ItemViewController.respondToSwipeGesture (ShoppingList.ItemViewController)(ObjectiveC.UIGestureRecognizer) -&gt; ():ItemViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "lastIndex">
+            </PersistentString>
+            <PersistentString
+               value = "colorCountBuffer">
+            </PersistentString>
+            <PersistentString
+               value = "colorCount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ShoppingList.ItemViewController.viewDidLoad (ShoppingList.ItemViewController)() -&gt; ():ItemViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "colorCount">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

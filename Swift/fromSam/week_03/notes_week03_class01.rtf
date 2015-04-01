@@ -1,0 +1,142 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1343\cocoasubrtf160
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red0\green128\blue0;\red0\green0\blue255;\red43\green131\blue159;
+}
+\margl1440\margr1440\vieww12060\viewh12800\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+{\field{\*\fldinst{HYPERLINK "http://justcode.turntotech.io:8080/TurnToTechOnline/jsp/public/modules.jsp?course_index=1"}}{\fldrslt 
+\f0\fs24 \cf0 http://justcode.turntotech.io:8080/TurnToTechOnline/jsp/public/modules.jsp?course_index=1}}
+\f0\fs24  (week 4 first module -> run sample code)\
+login: gmail\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 TurnToTech Week 03 class 01					Feb. 10, 2015\
+Project example files:
+\b0  AppFromFirstPrinciples.xcodeproj\
+
+\b Lecture files: 
+\b0 Class7.pdf\
+peers: Harteg, Lance\
+\
+
+\b iOS dev Fundamentals\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 The app is in a sandbox which doesn\'92t have access to the rest of the system.  Cannot access file system outside of this sandbox, but user needs to grant explicit permission.. The system still middle man - accesses system stuff and your app access the system.\
+\
+Documents/Inbox - relatively new, way for apps to communicate w/ each other (via files? not certain yet). \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+{\field{\*\fldinst{HYPERLINK "https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html"}}{\fldrslt \cf0 https://developer.apple.com/library/ios/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html}}\
+\
+{\field{\*\fldinst{HYPERLINK "https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html"}}{\fldrslt https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/Inter-AppCommunication/Inter-AppCommunication.html}}\
+\
+example of a tmp file: \
+- level data in a game which will go away if the app is closed\
+- comm btw 2 apps.. 1 app writes a file, 2nd app reads this file \
+- security feature - app phones home to check that it was paid for this month, if good, it writes to the temp file.. next time\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 Separation of Concerns:
+\b0  each piece of code that has a specific function should be isolated and only deals with one job - like departments in a company.\
+\
+CSS problem: use of color in multiple places.. you wanna change the color, you gotta change it in serveral places.. you can\'92t just change the value of one variable.\
+\
+
+\b MVC
+\b0 \
+Model - for data and logic(think of this as the classes)\
+View - output (what we see)\
+Controller - sits in between (converts the data)\
+\
+View - input field, Person info entered, press submit\
+Controller - takes this info, passes to model - hey create this Person Object\
+Model - created Person Object, tells Controller object was created, \
+\
+
+\b View
+\b0 \
+UIVIew\'85anything you see is a subclass of UIView \
+- the UIView objects handle events\
+\
+UIScreen - the entire rectangle of the screen (exists outside of UIView)\
+UIWindow - app lives inside this UIScreen - there could be  part of the screen that is not part of your app\
+	- * UIWindow has a single \'91rootView\'92 (that lives inside the UIWindow) - this is the first thing that the user sees (not the splash screen) the starting screen - like gmail\'92s inbox OR the login screen\
+	- * 
+\b w/o a rootview
+\b0 , user wont see anything - just the color of the UIWindow\
+\
+\
+No main function in Swift (there is one in Obj-C and C and Java)\
+- comment out 
+\fs22 \cf2 \CocoaLigature0 @UIApplicationMain\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\fs24 \cf0 \CocoaLigature1 results in a build failure, clicko nthe triangle in the top left menu to see the error: Apple Mach-O Linker Error, click on it, \'93_main\'94 error\
+if you remove, import UIKit you will have tons of errors that are \
+\
+AppDelegate (Class) - a single instance for any app\
+any app that is capable of running needs to have a class that extends 
+\b UIApplicationDelegate
+\b0 .. (this is a protocol) this just is\
+UIResponder - decides who handles events\
+protocol - functions \
+\
+General idea need something that looks like this:\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf3 \CocoaLigature0 class\cf0  AppDelegate: \cf4 UIResponder\cf0 , \cf4 UIApplicationDelegate\cf0  \{\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0 \cf0 \
+this: \cf3 func\cf0  application\
+is called for you, where you do some kind of set up for your app\
+- customizations (create a window..\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1 \cf0       \cf3 self\cf0 .\cf4 window\cf0  = \cf4 UIWindow\cf0 (frame: \cf4 UIScreen\cf0 .\cf4 mainScreen\cf0 ().\cf4 bounds\cf0 )\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f0 \cf0 breadkpoint line22.. In the variable inspector panel: find self, window->right click->print description, in the console: look for frame:\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1 \cf0 frame = (0 0; 768 1024);
+\f0 \
+x,y, \
+\
+\
+\pard\tx529\pardeftab529\pardirnatural
+
+\b \cf0 LifeCycle of the app:
+\b0  how does it start, continue and terminate.  All the activity is tracked and handled by the AppDelegate\
+\
+When you launch an app, it looks for the 
+\f1 AppDelegate
+\f0  Class, then runs some functions for you like, 
+\f1 applicationDidEnterBackground
+\f0  - these functions can be modified to customize behavior.. \
+like 
+\f1 applicationWillTerminate 
+\f0 (you can save state.. or something).\
+\
+just pick out the  functions you think you\'92ll need.\
+\
+Minimize the app: Hardware->Home button\
+- see the console outputs\
+\
+becareful - if you terminate the app, it will never call \'97 in the simulator\
+\
+\
+\'93
+\f2\b Application windows are expected to have a root view controller at the end of application launch
+\f0\b0 \'94  for the purposes of understanding the UIViews, there\'92s no view controller in this project.\
+\
+xib files -> let you do one screen at a time, storyboards allow for easier drag and drop..\
+more features \
+\
+\
+
+\b Assignment:
+\b0  build a simple calculator, add 2 text fields on that receives input, one that displays output, button ?how to get value from input text field?}
