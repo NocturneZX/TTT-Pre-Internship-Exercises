@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zww-Xc-9Fs">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--BushidoViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="BushidoViewController" id="BYZ-38-t0r" customClass="BushidoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Jrp-D1-XFj">
+                                <rect key="frame" x="175" y="137" width="184" height="43"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="jsW-Ef-qLn"/>
+                                </constraints>
+                                <string key="text">The Samurai Code
+</string>
+                                <fontDescription key="fontDescription" name="TamilSangamMN-Bold" family="Tamil Sangam MN" pointSize="36"/>
+                                <color key="textColor" red="0.61255944289999997" green="0.16534992670000001" blue="0.1942584778" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oXJ-4G-fN3">
+                                <rect key="frame" x="16" y="238" width="343" height="372"/>
+                                <string key="text">Bushido is the proper term for the Samurai Code.  It means "The way of the warrior." 
+ The Bushido held restrictions on the Samurai, prohibiting them to do many things and to live a very honest life.  This is not only good for Samurai, but for everyone as it will make each who follows a truer person.  
+
+There are seven virtues of the Bushido. 
+
+1.  "Gi"-Integrity.  To do the right thing by yourself.  A Samurai must be smart in making choices and always chose what is good for the clan.  He will make the right choice even if left alone.  Practice Gi in everything you do.
+
+
+    2.  "Yuuki"-Bravery and courage.  To show courage every moment of living, in danger or not.  
+
+
+    3.  "Jin"- Kindness and compassion.  To show everyone kindness and show compassion for all regardless.  
+
+
+    4.  "Rei"- Politeness.  Politeness is different in Japan, politeness is more than just being kind, its about caring about others, and some say it borders an almost love-like feeling.  
+
+ 
+    5.  "Makoto"- Honesty.  Be true by the actions you show, and by the words you speak.  Follow the laws of the universe and you will become a honest person.  
+
+
+    6.  "Meiyo"- To enjoy the honor.  A Samurai must earn honor and enjoy it if he is to satisfying the codes of the Bushido.
+
+
+    7.  "Chuugi"- To be loyal.  To be trustful, loyal, and show these unconditionally to others.
+
+
+  
+The Bushido code is a unique set of codes that allowed the Samurai to be the utmost professional warriors till this day.  Now, not only is it popular in Japan, it is popular all over the world, a book on the Bushido called Bushido, The Soul of Japan written by Inazo Nitobe was read by Theodore Roosevelt and John F. Kennedy.  </string>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="samurai-sunset-art.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sBD-0W-bGt">
+                                <rect key="frame" x="0.0" y="64" width="167" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="LYb-mM-gtd"/>
+                                    <constraint firstAttribute="height" constant="153" id="eda-gT-2Tr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89411764705882357" green="0.9137254901960784" blue="0.7686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jrp-D1-XFj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="5Dp-PY-leV"/>
+                            <constraint firstItem="oXJ-4G-fN3" firstAttribute="top" secondItem="sBD-0W-bGt" secondAttribute="bottom" constant="21" id="6Wb-IN-EEz"/>
+                            <constraint firstItem="oXJ-4G-fN3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7Za-WA-yst"/>
+                            <constraint firstItem="Jrp-D1-XFj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BSI-TQ-rNT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oXJ-4G-fN3" secondAttribute="bottom" constant="8" symbolic="YES" id="K8j-qy-khd"/>
+                            <constraint firstItem="oXJ-4G-fN3" firstAttribute="trailing" secondItem="Jrp-D1-XFj" secondAttribute="trailing" id="Vrs-FJ-SeH"/>
+                            <constraint firstItem="Jrp-D1-XFj" firstAttribute="leading" secondItem="sBD-0W-bGt" secondAttribute="trailing" constant="8" id="YFM-s1-0Cj"/>
+                            <constraint firstItem="sBD-0W-bGt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cb3-5P-hDm"/>
+                            <constraint firstItem="sBD-0W-bGt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="dak-hF-L95"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="oQ5-Sn-FeJ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2225.5" y="1466.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gHo-bK-s1E">
+            <objects>
+                <navigationController id="Zww-Xc-9Fs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YPP-AL-pQK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0yx-86-tiA" kind="relationship" relationship="rootViewController" id="hDe-L1-Us3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1us-ik-K9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="1009"/>
+        </scene>
+        <!--SecondViewController-->
+        <scene sceneID="5AQ-9M-qM8">
+            <objects>
+                <viewController title="SecondViewController" id="M6h-XZ-3yZ" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3q6-bh-fmN"/>
+                        <viewControllerLayoutGuide type="bottom" id="OcD-15-obN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zVa-DP-pea">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OH1-3N-uql">
+                                <rect key="frame" x="16" y="72" width="343" height="42"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hf2-Uo-0sD">
+                                <rect key="frame" x="153" y="448" width="206" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEK-h0-ku2">
+                                <rect key="frame" x="220" y="349" width="112" height="30"/>
+                                <state key="normal" title="Notify From Two">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notify Message :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dou-fn-xAV">
+                                <rect key="frame" x="16" y="452" width="129" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="129" id="Ypo-Nc-d0H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHr-iA-L5E">
+                                <rect key="frame" x="44" y="349" width="113" height="30"/>
+                                <state key="normal" title="Notify From One">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Loaded by the 2nd View Controller — an instance of DEMOSecondViewController — specified in the app delegate. Agni  " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2uh-ex-CPH">
+                                <rect key="frame" x="16" y="232" width="343" height="109"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="MBC-FT-U47"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.39062196260334436" blue="0.40898904401662572" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hf2-Uo-0sD" firstAttribute="top" secondItem="OHr-iA-L5E" secondAttribute="bottom" constant="69" id="2Vz-mY-yvR"/>
+                            <constraint firstItem="OHr-iA-L5E" firstAttribute="top" secondItem="2uh-ex-CPH" secondAttribute="bottom" constant="8" id="Rg5-aj-jYa"/>
+                            <constraint firstItem="OH1-3N-uql" firstAttribute="trailing" secondItem="2uh-ex-CPH" secondAttribute="trailing" id="Rm8-av-ar6"/>
+                            <constraint firstItem="hf2-Uo-0sD" firstAttribute="leading" secondItem="dou-fn-xAV" secondAttribute="trailing" constant="8" symbolic="YES" id="S3V-pd-cb1"/>
+                            <constraint firstItem="OcD-15-obN" firstAttribute="top" secondItem="hf2-Uo-0sD" secondAttribute="bottom" constant="140" id="YuY-hj-ZYj"/>
+                            <constraint firstItem="OH1-3N-uql" firstAttribute="leading" secondItem="zVa-DP-pea" secondAttribute="leadingMargin" id="dHb-qY-1P6"/>
+                            <constraint firstItem="2uh-ex-CPH" firstAttribute="leading" secondItem="dou-fn-xAV" secondAttribute="leading" id="egz-fl-fMC"/>
+                            <constraint firstItem="OH1-3N-uql" firstAttribute="trailing" secondItem="zVa-DP-pea" secondAttribute="trailingMargin" id="hOA-kb-hgP"/>
+                            <constraint firstItem="mEK-h0-ku2" firstAttribute="baseline" secondItem="OHr-iA-L5E" secondAttribute="baseline" id="har-bR-jtb"/>
+                            <constraint firstItem="OcD-15-obN" firstAttribute="top" secondItem="dou-fn-xAV" secondAttribute="bottom" constant="145" id="jso-XO-nDQ"/>
+                            <constraint firstItem="OHr-iA-L5E" firstAttribute="leading" secondItem="zVa-DP-pea" secondAttribute="leading" constant="44" id="mVd-pr-rZW"/>
+                            <constraint firstAttribute="trailing" secondItem="mEK-h0-ku2" secondAttribute="trailing" constant="43" id="onX-qk-zxb"/>
+                            <constraint firstItem="OH1-3N-uql" firstAttribute="top" secondItem="3q6-bh-fmN" secondAttribute="bottom" constant="8" id="pu7-iT-wRG"/>
+                            <constraint firstItem="hf2-Uo-0sD" firstAttribute="trailing" secondItem="2uh-ex-CPH" secondAttribute="trailing" id="rTw-Qc-nO6"/>
+                            <constraint firstItem="OH1-3N-uql" firstAttribute="leading" secondItem="2uh-ex-CPH" secondAttribute="leading" id="x5I-Ms-aSP"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="3Wg-kf-htI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mi5-nq-Z3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2226" y="561"/>
+        </scene>
+        <!--GundamViewController-->
+        <scene sceneID="WKY-ZY-QhD">
+            <objects>
+                <viewController title="GundamViewController" id="9Ts-w5-Ylw" customClass="GundamViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jhi-5n-kLf"/>
+                        <viewControllerLayoutGuide type="bottom" id="7P1-4t-Fio"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4nY-Mh-uU9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="XEvBrnE.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-US-XAc">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BT-A6-QpM">
+                                <rect key="frame" x="16" y="274" width="382" height="405"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">The GN-001 Gundam Exia (aka Gundam Exia, Exia, Gundam Seven Swords), is the close combat Gundam featured in both seasons of Mobile Suit Gundam 00. The unit is piloted by Setsuna F. Seiei.
+
+
+Technology &amp; Combat Characteristics 
+A 3rd-Generation Gundam, Exia is designed to be a close quarters combat (CQC) type mobile suit (MS). The unit is the successor to GNY-001 Gundam Astraea and one of the predecessors to GN-0000 00 Gundam. Much of Exia's design was heavily influenced by the Astraea Gundam. What this means is that even though Exia's weapons are specialized for CQC, its basic performance is still that of a general purpose mobile suit. This is mostly evident as Exia is the only Gundam out of the four main 3rd Generation units that retain a MS frame that has human-like range of motion. The lack of this range of motion on the other three units is not considered a weakness but rather because it was deemed unnecessary.[1]
+
+Gundams (and by extension other GNMS) benefit from the weight reducing effects of GN Particles, and this effect can also be used for weight alteration of various body parts. Because of this, the pilot can freely control the suit's inertia, influencing maneuverability when it is in the airborne. In space, this ability is transformed into Active Mass Balance Auto Control (AMBAC). As such, the legs actually never need to "walk" when moving.[1]
+
+As Exia was designed as a close quarters unit, there is a need for its movements to be as human-like as possible. In order to achieve this, Exia was designed with joints that have the same range of motion as a human. To ensure that Exia's range of movement is not affected, its armor is separated into much finer pieces than the other Gundams. The latter trait also means that portions of the internal structure is revealed during certain postures. Although this lowers Exia's overall defensive ability, it served Exia as it has the lowest "being hit" rate among the four main 3rd Generation Gundams.[1] Exia's mobility also exceeds that of other conventional mobile suits of the time with the exception of customized high speed variants.[2]
+
+Externally, the most eye catching feature of Exia is the numerous purple cables on its body; especially the cables that extend from the shoulders to the arms that are not present in the other Gundams. Named GN Power Lines, their main purpose is to transport large amounts of GN Particles to and from various parts of the body. As Exia frequently engages the enemy in close quarters, its higher amount of exposed cables allows it to have finer posture control than the other Gundams. This design optimizes mobility at the cost of defensive capability and is considered a liability, this issue was later fixed in the Exia R2 as the GN Power Lines are now internalized within the armor.[1]
+
+Appearance wise, Gundams have heads that are human-like. The head of Gundams are said to be similar to a human brain as they both control the functions of the body. Exia's head design is modeled after the pilot helmet worn by earlier Gundam Meisters. This was done to cement the belief of the Meister being the Gundam. Third Generation Gundams like Exia also possess head antennas that control particle distribution, though most of the actual particle control responsibility is taken up by the antennas at the shoulders and neck. The head also has other head antennas that function as communication and sensor devices while at the same time also containing a blackbox device used for establishing a link with Veda.[1]
+
+Its GN Condensers also can show visually the amount of particles it holds as well as the particle compression rate it is currently using. This ability is also used for secret communication with friendly forces.[1] The total energy output of Gundams like Exia is extremely powerful compared to other conventional suits of the time. Billy Katagiri estimated that Exia has approximately six times the output of the Flag based on the impact damage analyzed on Graham Aker's suit after his first encounter with Exia.[3]
+
+One of Exia's important intended roles is to deal with any traitor units that use GN Field technology.[4][5] To counter any GN Field usage, Exia's solid swords are all designed with the ability to easily pierce them on contact.[4] Early on, this role was to be shared by both Exia and Virtue Physical but after the latter's usage was discounted by Veda in favor of Virtue Particle, the task fell solely on Exia. The change in plans also meant that Exia's pilot would shoulder a higher level of responsibility.[5]
+
+When heavier firepower and defense is needed, Exia can receive combat support from GNR-001E GN Arms Type-E and the Assault Container. The GN Arms Type E itself is a customized transformable fighter, with mid-range beam weaponry and melee weapons themed after Exia's weapons silhouette. When greater power is needed, Exia and GN Arms can combine to become a mobile armor. Exia's GN Drive docks right into the MA to power the weapons platform. If a situation arises where greater speed is needed, Exia can be equipped with its own specialized armor, the Avalanche Pack, which would be later upgraded into the Avalanche ` Pack. The Assault Container works in conjunction with the GN Arms and Exia as a miniature armed MS carrier. It was designed to dock with both Exia and GN Arms for atmospheric entry and exit missions. It's heavily armored and has enough fire power to match an entire ESF battlefleet.
+
+In addition, the Exia has a "GN Drive Burst Mode" function that can temporarily increase the output of the GN Drive and hence the ability of the suit, but it was rarely used due to its instability. It would later be used by the Exia Repair II that has inherited the function.[1][6] Exia's overall capabilities can be enhanced through the power of the Trans-Am System.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.00048315016710842595" green="1" blue="0.75599502682412567" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="smallSystem"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZeY-US-XAc" firstAttribute="top" secondItem="Jhi-5n-kLf" secondAttribute="bottom" id="1iH-Zu-UEF"/>
+                            <constraint firstItem="7P1-4t-Fio" firstAttribute="top" secondItem="0BT-A6-QpM" secondAttribute="bottom" constant="8" symbolic="YES" id="MyM-8o-2lF"/>
+                            <constraint firstItem="ZeY-US-XAc" firstAttribute="leading" secondItem="4nY-Mh-uU9" secondAttribute="leading" id="d0r-ml-BMU"/>
+                            <constraint firstItem="0BT-A6-QpM" firstAttribute="leading" secondItem="4nY-Mh-uU9" secondAttribute="leadingMargin" id="hTc-YY-mzj"/>
+                            <constraint firstItem="0BT-A6-QpM" firstAttribute="top" secondItem="Jhi-5n-kLf" secondAttribute="bottom" constant="210" id="mbc-qT-Csf"/>
+                            <constraint firstItem="ZeY-US-XAc" firstAttribute="bottom" secondItem="7P1-4t-Fio" secondAttribute="top" id="q4B-LU-fqW"/>
+                            <constraint firstItem="0BT-A6-QpM" firstAttribute="centerX" secondItem="ZeY-US-XAc" secondAttribute="centerX" id="rPj-hm-olq"/>
+                            <constraint firstAttribute="trailing" secondItem="ZeY-US-XAc" secondAttribute="trailing" id="sS3-l0-AjJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="yvj-ur-uPm"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Fq-cl-VeD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1511" y="2361"/>
+        </scene>
+        <!--FirstViewController-->
+        <scene sceneID="BdV-KQ-kON">
+            <objects>
+                <viewController title="FirstViewController" id="iB3-N3-muu" customClass="FirstViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SdT-8e-fOH"/>
+                        <viewControllerLayoutGuide type="bottom" id="AsT-ha-csI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jpB-Mn-BrH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="First View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="BZV-EP-Itw">
+                                <rect key="frame" x="16" y="120" width="343" height="43"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="cAU-PT-TDW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TamilSangamMN" family="Tamil Sangam MN" pointSize="36"/>
+                                <color key="textColor" red="0.61255944289999997" green="0.16534992670000001" blue="0.1942584778" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7j0-0n-Gq1">
+                                <rect key="frame" x="16" y="261" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mKS-dO-O4W">
+                                <rect key="frame" x="16" y="351" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notification Text 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dau-m1-iNo">
+                                <rect key="frame" x="2" y="232" width="371" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="371" id="m3S-NC-uLu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project 9: Demonstrates Tabs and Notifications" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIW-Xh-JqA">
+                                <rect key="frame" x="23" y="71" width="336" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="Hch-Bx-cqg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notification Text 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De3-NZ-b5e">
+                                <rect key="frame" x="119" y="322" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qIW-Xh-JqA" firstAttribute="top" secondItem="SdT-8e-fOH" secondAttribute="bottom" constant="7" id="6JQ-rn-oBY"/>
+                            <constraint firstItem="7j0-0n-Gq1" firstAttribute="leading" secondItem="mKS-dO-O4W" secondAttribute="leading" id="Gtz-aJ-T70"/>
+                            <constraint firstItem="mKS-dO-O4W" firstAttribute="trailing" secondItem="jpB-Mn-BrH" secondAttribute="trailingMargin" id="KOR-Vp-718"/>
+                            <constraint firstItem="De3-NZ-b5e" firstAttribute="centerX" secondItem="mKS-dO-O4W" secondAttribute="centerX" id="NUA-O4-BMg"/>
+                            <constraint firstItem="7j0-0n-Gq1" firstAttribute="trailing" secondItem="mKS-dO-O4W" secondAttribute="trailing" id="O01-9G-X6r"/>
+                            <constraint firstItem="7j0-0n-Gq1" firstAttribute="centerX" secondItem="Dau-m1-iNo" secondAttribute="centerX" id="O4r-tX-xls"/>
+                            <constraint firstItem="BZV-EP-Itw" firstAttribute="top" secondItem="qIW-Xh-JqA" secondAttribute="bottom" constant="8" symbolic="YES" id="Td9-CJ-U3m"/>
+                            <constraint firstItem="7j0-0n-Gq1" firstAttribute="leading" secondItem="jpB-Mn-BrH" secondAttribute="leadingMargin" id="WAW-u5-8eq"/>
+                            <constraint firstItem="AsT-ha-csI" firstAttribute="top" secondItem="mKS-dO-O4W" secondAttribute="bottom" constant="237" id="YzK-u7-fqQ"/>
+                            <constraint firstItem="BZV-EP-Itw" firstAttribute="leading" secondItem="7j0-0n-Gq1" secondAttribute="leading" id="Z0V-og-UbD"/>
+                            <constraint firstItem="qIW-Xh-JqA" firstAttribute="leading" secondItem="jpB-Mn-BrH" secondAttribute="leadingMargin" constant="7" id="bMU-C0-uOo"/>
+                            <constraint firstItem="mKS-dO-O4W" firstAttribute="top" secondItem="De3-NZ-b5e" secondAttribute="bottom" constant="8" symbolic="YES" id="cEM-y6-bqc"/>
+                            <constraint firstItem="7j0-0n-Gq1" firstAttribute="trailing" secondItem="BZV-EP-Itw" secondAttribute="trailing" id="iiv-wW-HZD"/>
+                            <constraint firstItem="BZV-EP-Itw" firstAttribute="trailing" secondItem="qIW-Xh-JqA" secondAttribute="trailing" id="rQn-xP-ZfR"/>
+                            <constraint firstItem="7j0-0n-Gq1" firstAttribute="top" secondItem="Dau-m1-iNo" secondAttribute="bottom" constant="8" symbolic="YES" id="u74-dg-vRr"/>
+                            <constraint firstItem="De3-NZ-b5e" firstAttribute="top" secondItem="7j0-0n-Gq1" secondAttribute="bottom" constant="31" id="vk4-kk-cTL"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Rdx-uf-ZcZ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ITG-dO-yjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1512" y="-335"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="NyY-Zt-Msp">
+            <objects>
+                <tabBarController id="0yx-86-tiA" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="wFO-Gr-Blg"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="dR7-1B-w0X">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iB3-N3-muu" kind="relationship" relationship="viewControllers" id="VDT-6k-vtt"/>
+                        <segue destination="M6h-XZ-3yZ" kind="relationship" relationship="viewControllers" id="SAq-wl-uWT"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="otc-zd-bih"/>
+                        <segue destination="9Ts-w5-Ylw" kind="relationship" relationship="viewControllers" id="hm2-2E-54g"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Df8-JY-3eK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="450" y="1009"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="XEvBrnE.jpg" width="1680" height="1050"/>
+        <image name="samurai-sunset-art.jpg" width="1024" height="1024"/>
+    </resources>
+</document>
