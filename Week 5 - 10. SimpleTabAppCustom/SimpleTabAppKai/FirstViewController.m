@@ -25,15 +25,7 @@
     if (self) {
         self.title = NSLocalizedString(@"First", @"First");
         self.tabBarItem.image = [UIImage imageNamed:@"first"];
-        
-        
-        counter1 = 0;
-        counter2 = 0;
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(receiveNotification:) name:@"Test1" object:nil];
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(receiveNotification:) name:@"Test2" object:nil];
+
     }
     return self;
 }
@@ -45,12 +37,12 @@
     
     if ([[notification name] isEqualToString:@"Test1"]) {
         counter1++;
-        _txtCounter1.text = [NSString stringWithFormat:@"The Sun's light has burned Moon's gaze.%@: %d",
+        _txtCounter1.text = [NSString stringWithFormat:@"The Sun's light has burned Moon's gaze. %@: %d",
                             [extraInfo objectForKey:@"button_name"], counter1];
     }
     else{
         counter2++;
-        _txtCounter2.text = [NSString stringWithFormat:@"The Moon's darknees has extingushed Sun's flames. %@: %d",
+        _txtCounter2.text = [NSString stringWithFormat:@"The Moon's darkness has extingushed Sun's flames. %@: %d",
                             [extraInfo objectForKey:@"button_name"], counter2];
     }
 }
@@ -65,7 +57,18 @@
     // Dispose of any resources that can be recreated.
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    
+    counter1 = 0;
+    counter2 = 0;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:) name:@"Test1" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:) name:@"Test2" object:nil];
+}
 /*
 #pragma mark - Navigation
 
@@ -75,5 +78,15 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
 
 @end

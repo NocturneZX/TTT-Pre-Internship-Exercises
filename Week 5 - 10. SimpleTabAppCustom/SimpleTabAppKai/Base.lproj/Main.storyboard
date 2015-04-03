@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zww-Xc-9Fs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zww-Xc-9Fs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -39,7 +39,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="AL6-JK-hvD">
                                 <rect key="frame" x="16" y="225" width="343" height="385"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Bushido is the proper term for the Samurai Code.  It means "The way of the warrior." 
+                                <string key="text">Bushido is the proper term for the Samurai Code.  It means "The way of the warrior." 
  The Bushido held restrictions on the Samurai, prohibiting them to do many things and to live a very honest life.  This is not only good for Samurai, but for everyone as it will make each who follows a truer person.  
 
 There are seven virtues of the Bushido. 
@@ -66,7 +66,7 @@ There are seven virtues of the Bushido.
 
 
   
-The Bushido code is a unique set of codes that allowed the Samurai to be the utmost professional warriors till this day.  Now, not only is it popular in Japan, it is popular all over the world, a book on the Bushido called Bushido, The Soul of Japan written by Inazo Nitobe was read by Theodore Roosevelt and John F. Kennedy.  </mutableString>
+The Bushido code is a unique set of codes that allowed the Samurai to be the utmost professional warriors till this day.  Now, not only is it popular in Japan, it is popular all over the world, a book on the Bushido called Bushido, The Soul of Japan written by Inazo Nitobe was read by Theodore Roosevelt and John F. Kennedy.  </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -300,14 +300,20 @@ In addition, the Exia has a "GN Drive Burst Mode" function that can temporarily 
                                 <rect key="frame" x="16" y="261" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="iB3-N3-muu" id="rnB-xA-gNO"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mKS-dO-O4W">
                                 <rect key="frame" x="16" y="351" width="343" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="iB3-N3-muu" id="X0Y-Gb-53i"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notification Text 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dau-m1-iNo">
-                                <rect key="frame" x="2" y="232" width="371" height="21"/>
+                                <rect key="frame" x="2" y="233" width="371" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="371" id="m3S-NC-uLu"/>
                                 </constraints>
@@ -325,7 +331,7 @@ In addition, the Exia has a "GN Drive Burst Mode" function that can temporarily 
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notification Text 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="De3-NZ-b5e">
-                                <rect key="frame" x="119" y="322" width="138" height="21"/>
+                                <rect key="frame" x="119" y="322" width="138" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>

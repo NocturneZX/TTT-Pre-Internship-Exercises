@@ -17,7 +17,6 @@
 {
     self = [super init];
     if (self) {
-        self.title = @"Gundam";
         self.tabBarItem.image = [UIImage imageNamed:@"second"];
     }
     return self;
@@ -25,8 +24,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"Second";
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:) name:@"Test1" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(receiveNotification:) name:@"Test2" object:nil];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -51,7 +65,7 @@
     NSLog(@"Second View Notification Received: %@", [notification name]);
     
     NSDictionary *extraInfo = [notification userInfo];
-    [_txtNotify setText:[extraInfo objectForKey:@"button_name"]];
+    [_txtNotify setText:[NSString stringWithFormat:@"%@ was pressed.", [extraInfo objectForKey:@"button_name"]]];
 }
 
 /*
@@ -63,5 +77,38 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (void)keyboardWillShow:(NSNotification *)notification {
+    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    float newVerticalPosition = -keyboardSize.height;
+    
+    [self moveFrameToVerticalPosition:newVerticalPosition forDuration:0.3f];
+}
+
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+    [self moveFrameToVerticalPosition:0.0f forDuration:0.3f];
+}
+
+
+- (void)moveFrameToVerticalPosition:(float)position forDuration:(float)duration {
+    CGRect frame = self.view.frame;
+    frame.origin.y = position;
+    
+    [UIView animateWithDuration:duration animations:^{
+        self.view.frame = frame;
+    }];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touchesBegan:withEvent:");
+    [self.view endEditing:YES];
+    [super touchesBegan:touches withEvent:event];
+}
 
 @end
