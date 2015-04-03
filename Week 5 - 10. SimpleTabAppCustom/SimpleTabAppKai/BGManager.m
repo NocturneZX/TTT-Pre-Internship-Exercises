@@ -61,7 +61,7 @@
 
 - (void)configureAudioPlayer {
     // Create audio player with background music
-    NSString *backgroundMusicPathEin = [[NSBundle mainBundle] pathForResource:@"GundamEarth" ofType:@"caf"];
+    NSString *backgroundMusicPathEin = [[NSBundle mainBundle] pathForResource:@"TheComingStorm" ofType:@"caf"];
    
     NSURL *backgroundMusicURL = [NSURL fileURLWithPath:backgroundMusicPathEin];
     

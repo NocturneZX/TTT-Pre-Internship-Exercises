@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D2C3ED81ACF11A4004D46DA /* BGManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2C3ED71ACF11A4004D46DA /* BGManager.m */; };
+		4D2C3EDA1ACF2F5C004D46DA /* TheComingStorm.caf in Resources */ = {isa = PBXBuildFile; fileRef = 4D2C3ED91ACF2F5B004D46DA /* TheComingStorm.caf */; };
 		AA3551611ACDFC68005A0BF3 /* XEvBrnE.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA3551601ACDFC68005A0BF3 /* XEvBrnE.jpg */; };
 		AA3551661ACEFF25005A0BF3 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3551621ACEFF25005A0BF3 /* first.png */; };
 		AA3551671ACEFF25005A0BF3 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3551631ACEFF25005A0BF3 /* first@2x.png */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		4D2C3ED61ACF11A4004D46DA /* BGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGManager.h; sourceTree = "<group>"; };
 		4D2C3ED71ACF11A4004D46DA /* BGManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGManager.m; sourceTree = "<group>"; };
+		4D2C3ED91ACF2F5B004D46DA /* TheComingStorm.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TheComingStorm.caf; sourceTree = "<group>"; };
 		AA3551601ACDFC68005A0BF3 /* XEvBrnE.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = XEvBrnE.jpg; sourceTree = "<group>"; };
 		AA3551621ACEFF25005A0BF3 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		AA3551631ACEFF25005A0BF3 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				AA3CC30B1ACCB8880088BFF5 /* GundamViewController.m */,
 				AA3CC3101ACDDDA40088BFF5 /* samurai-sunset-art.jpg */,
 				AA3551601ACDFC68005A0BF3 /* XEvBrnE.jpg */,
+				4D2C3ED91ACF2F5B004D46DA /* TheComingStorm.caf */,
 			);
 			path = SimpleTabAppKai;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				AA3CC2EF1ACC9D220088BFF5 /* LaunchScreen.xib in Resources */,
 				AA3CC3111ACDDDA40088BFF5 /* samurai-sunset-art.jpg in Resources */,
 				AA3CC2EC1ACC9D220088BFF5 /* Images.xcassets in Resources */,
+				4D2C3EDA1ACF2F5C004D46DA /* TheComingStorm.caf in Resources */,
 				AA3551691ACEFF25005A0BF3 /* second@2x.png in Resources */,
 				AA3551671ACEFF25005A0BF3 /* first@2x.png in Resources */,
 			);
