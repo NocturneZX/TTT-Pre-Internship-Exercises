@@ -9,8 +9,11 @@
 #import "GundamViewController.h"
 
 @interface GundamViewController ()
+@property (nonatomic, weak) IBOutlet UIImageView *gundamImageView;
 
 @end
+
+#define animationDuration 0.5
 
 @implementation GundamViewController
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -26,6 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [UIView animateWithDuration:animationDuration animations:^{
+        // Image will appear
+        self.gundamImageView.alpha = 1;
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -14,6 +14,11 @@
 		AA3551671ACEFF25005A0BF3 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3551631ACEFF25005A0BF3 /* first@2x.png */; };
 		AA3551681ACEFF25005A0BF3 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3551641ACEFF25005A0BF3 /* second.png */; };
 		AA3551691ACEFF25005A0BF3 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3551651ACEFF25005A0BF3 /* second@2x.png */; };
+		AA35516C1ACF31C7005A0BF3 /* DEMOTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA35516B1ACF31C7005A0BF3 /* DEMOTabViewController.m */; };
+		AA35516E1ACF3803005A0BF3 /* kanjiheaven.png in Resources */ = {isa = PBXBuildFile; fileRef = AA35516D1ACF3803005A0BF3 /* kanjiheaven.png */; };
+		AA3551701ACF387C005A0BF3 /* kanjiheaven@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA35516F1ACF387C005A0BF3 /* kanjiheaven@2x.png */; };
+		AA3551731ACF38ED005A0BF3 /* EXiaSD.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3551711ACF38ED005A0BF3 /* EXiaSD.png */; };
+		AA3551741ACF38ED005A0BF3 /* EXiaSD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AA3551721ACF38ED005A0BF3 /* EXiaSD@2x.png */; };
 		AA3CC2E11ACC9D220088BFF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3CC2E01ACC9D220088BFF5 /* main.m */; };
 		AA3CC2E41ACC9D220088BFF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3CC2E31ACC9D220088BFF5 /* AppDelegate.m */; };
 		AA3CC2E71ACC9D220088BFF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3CC2E61ACC9D220088BFF5 /* ViewController.m */; };
@@ -47,6 +52,12 @@
 		AA3551631ACEFF25005A0BF3 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
 		AA3551641ACEFF25005A0BF3 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		AA3551651ACEFF25005A0BF3 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
+		AA35516A1ACF31C7005A0BF3 /* DEMOTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOTabViewController.h; sourceTree = "<group>"; };
+		AA35516B1ACF31C7005A0BF3 /* DEMOTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOTabViewController.m; sourceTree = "<group>"; };
+		AA35516D1ACF3803005A0BF3 /* kanjiheaven.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kanjiheaven.png; sourceTree = "<group>"; };
+		AA35516F1ACF387C005A0BF3 /* kanjiheaven@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kanjiheaven@2x.png"; sourceTree = "<group>"; };
+		AA3551711ACF38ED005A0BF3 /* EXiaSD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EXiaSD.png; sourceTree = "<group>"; };
+		AA3551721ACF38ED005A0BF3 /* EXiaSD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EXiaSD@2x.png"; sourceTree = "<group>"; };
 		AA3CC2DB1ACC9D220088BFF5 /* SimpleTabAppKai.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTabAppKai.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3CC2DF1ACC9D220088BFF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3CC2E01ACC9D220088BFF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,6 +140,8 @@
 				AA3CC3101ACDDDA40088BFF5 /* samurai-sunset-art.jpg */,
 				AA3551601ACDFC68005A0BF3 /* XEvBrnE.jpg */,
 				4D2C3ED91ACF2F5B004D46DA /* TheComingStorm.caf */,
+				AA35516A1ACF31C7005A0BF3 /* DEMOTabViewController.h */,
+				AA35516B1ACF31C7005A0BF3 /* DEMOTabViewController.m */,
 			);
 			path = SimpleTabAppKai;
 			sourceTree = "<group>";
@@ -136,12 +149,16 @@
 		AA3CC2DE1ACC9D220088BFF5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA3551711ACF38ED005A0BF3 /* EXiaSD.png */,
+				AA3551721ACF38ED005A0BF3 /* EXiaSD@2x.png */,
 				4D2C3ED61ACF11A4004D46DA /* BGManager.h */,
 				4D2C3ED71ACF11A4004D46DA /* BGManager.m */,
 				AA3551621ACEFF25005A0BF3 /* first.png */,
 				AA3551631ACEFF25005A0BF3 /* first@2x.png */,
 				AA3551641ACEFF25005A0BF3 /* second.png */,
 				AA3551651ACEFF25005A0BF3 /* second@2x.png */,
+				AA35516D1ACF3803005A0BF3 /* kanjiheaven.png */,
+				AA35516F1ACF387C005A0BF3 /* kanjiheaven@2x.png */,
 				AA3CC2DF1ACC9D220088BFF5 /* Info.plist */,
 				AA3CC2E01ACC9D220088BFF5 /* main.m */,
 			);
@@ -245,12 +262,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3551741ACF38ED005A0BF3 /* EXiaSD@2x.png in Resources */,
+				AA3551731ACF38ED005A0BF3 /* EXiaSD.png in Resources */,
 				AA3551661ACEFF25005A0BF3 /* first.png in Resources */,
 				AA3551681ACEFF25005A0BF3 /* second.png in Resources */,
 				AA3551611ACDFC68005A0BF3 /* XEvBrnE.jpg in Resources */,
+				AA3551701ACF387C005A0BF3 /* kanjiheaven@2x.png in Resources */,
 				AA3CC2EA1ACC9D220088BFF5 /* Main.storyboard in Resources */,
 				AA3CC2EF1ACC9D220088BFF5 /* LaunchScreen.xib in Resources */,
 				AA3CC3111ACDDDA40088BFF5 /* samurai-sunset-art.jpg in Resources */,
+				AA35516E1ACF3803005A0BF3 /* kanjiheaven.png in Resources */,
 				AA3CC2EC1ACC9D220088BFF5 /* Images.xcassets in Resources */,
 				4D2C3EDA1ACF2F5C004D46DA /* TheComingStorm.caf in Resources */,
 				AA3551691ACEFF25005A0BF3 /* second@2x.png in Resources */,
@@ -276,6 +297,7 @@
 				AA3CC3091ACCAB740088BFF5 /* SecondViewController.m in Sources */,
 				4D2C3ED81ACF11A4004D46DA /* BGManager.m in Sources */,
 				AA3CC30F1ACCB8930088BFF5 /* BushidoViewController.m in Sources */,
+				AA35516C1ACF31C7005A0BF3 /* DEMOTabViewController.m in Sources */,
 				AA3CC2E71ACC9D220088BFF5 /* ViewController.m in Sources */,
 				AA3CC2E41ACC9D220088BFF5 /* AppDelegate.m in Sources */,
 				AA3CC2E11ACC9D220088BFF5 /* main.m in Sources */,

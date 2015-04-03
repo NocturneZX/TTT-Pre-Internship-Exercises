@@ -29,9 +29,17 @@
                                 <color key="textColor" red="0.61255944289999997" green="0.16534992670000001" blue="0.1942584778" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oXJ-4G-fN3">
-                                <rect key="frame" x="16" y="238" width="343" height="372"/>
-                                <string key="text">Bushido is the proper term for the Samurai Code.  It means "The way of the warrior." 
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="samurai-sunset-art.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sBD-0W-bGt">
+                                <rect key="frame" x="0.0" y="64" width="167" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="167" id="LYb-mM-gtd"/>
+                                    <constraint firstAttribute="height" constant="153" id="eda-gT-2Tr"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="AL6-JK-hvD">
+                                <rect key="frame" x="16" y="225" width="343" height="385"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Bushido is the proper term for the Samurai Code.  It means "The way of the warrior." 
  The Bushido held restrictions on the Samurai, prohibiting them to do many things and to live a very honest life.  This is not only good for Samurai, but for everyone as it will make each who follows a truer person.  
 
 There are seven virtues of the Bushido. 
@@ -58,33 +66,25 @@ There are seven virtues of the Bushido.
 
 
   
-The Bushido code is a unique set of codes that allowed the Samurai to be the utmost professional warriors till this day.  Now, not only is it popular in Japan, it is popular all over the world, a book on the Bushido called Bushido, The Soul of Japan written by Inazo Nitobe was read by Theodore Roosevelt and John F. Kennedy.  </string>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+The Bushido code is a unique set of codes that allowed the Samurai to be the utmost professional warriors till this day.  Now, not only is it popular in Japan, it is popular all over the world, a book on the Bushido called Bushido, The Soul of Japan written by Inazo Nitobe was read by Theodore Roosevelt and John F. Kennedy.  </mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="samurai-sunset-art.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="sBD-0W-bGt">
-                                <rect key="frame" x="0.0" y="64" width="167" height="153"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="167" id="LYb-mM-gtd"/>
-                                    <constraint firstAttribute="height" constant="153" id="eda-gT-2Tr"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.89411764705882357" green="0.9137254901960784" blue="0.7686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="AL6-JK-hvD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="2Uq-7b-yIj"/>
                             <constraint firstItem="Jrp-D1-XFj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="5Dp-PY-leV"/>
-                            <constraint firstItem="oXJ-4G-fN3" firstAttribute="top" secondItem="sBD-0W-bGt" secondAttribute="bottom" constant="21" id="6Wb-IN-EEz"/>
-                            <constraint firstItem="oXJ-4G-fN3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7Za-WA-yst"/>
                             <constraint firstItem="Jrp-D1-XFj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BSI-TQ-rNT"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="oXJ-4G-fN3" secondAttribute="bottom" constant="8" symbolic="YES" id="K8j-qy-khd"/>
-                            <constraint firstItem="oXJ-4G-fN3" firstAttribute="trailing" secondItem="Jrp-D1-XFj" secondAttribute="trailing" id="Vrs-FJ-SeH"/>
                             <constraint firstItem="Jrp-D1-XFj" firstAttribute="leading" secondItem="sBD-0W-bGt" secondAttribute="trailing" constant="8" id="YFM-s1-0Cj"/>
                             <constraint firstItem="sBD-0W-bGt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cb3-5P-hDm"/>
                             <constraint firstItem="sBD-0W-bGt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="dak-hF-L95"/>
+                            <constraint firstItem="AL6-JK-hvD" firstAttribute="top" secondItem="sBD-0W-bGt" secondAttribute="bottom" constant="8" symbolic="YES" id="fFU-gL-AHB"/>
+                            <constraint firstItem="AL6-JK-hvD" firstAttribute="trailing" secondItem="Jrp-D1-XFj" secondAttribute="trailing" id="hGk-W6-2bj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AL6-JK-hvD" secondAttribute="bottom" constant="8" symbolic="YES" id="nZ7-zm-bja"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="oQ5-Sn-FeJ"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Bushido" image="kanjiheaven.png" id="oQ5-Sn-FeJ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -130,12 +130,18 @@ The Bushido code is a unique set of codes that allowed the Samurai to be the utm
                                 <rect key="frame" x="153" y="448" width="206" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="M6h-XZ-3yZ" id="Q1f-Fb-8JK"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEK-h0-ku2">
                                 <rect key="frame" x="220" y="349" width="112" height="30"/>
                                 <state key="normal" title="Notify From Two">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="twoPressed:" destination="M6h-XZ-3yZ" eventType="touchUpInside" id="4dR-O3-uKW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Notify Message :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dou-fn-xAV">
                                 <rect key="frame" x="16" y="452" width="129" height="21"/>
@@ -151,6 +157,9 @@ The Bushido code is a unique set of codes that allowed the Samurai to be the utm
                                 <state key="normal" title="Notify From One">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onePressed:" destination="M6h-XZ-3yZ" eventType="touchUpInside" id="R4I-2Q-jbd"/>
+                                </connections>
                             </button>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" text="Loaded by the 2nd View Controller — an instance of DEMOSecondViewController — specified in the app delegate. Agni  " textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2uh-ex-CPH">
                                 <rect key="frame" x="16" y="232" width="343" height="109"/>
@@ -182,8 +191,11 @@ The Bushido code is a unique set of codes that allowed the Samurai to be the utm
                             <constraint firstItem="OH1-3N-uql" firstAttribute="leading" secondItem="2uh-ex-CPH" secondAttribute="leading" id="x5I-Ms-aSP"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="3Wg-kf-htI"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Second" image="second.png" id="3Wg-kf-htI"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="txtNotify" destination="hf2-Uo-0sD" id="XzV-Tk-uiw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mi5-nq-Z3r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,10 +213,10 @@ The Bushido code is a unique set of codes that allowed the Samurai to be the utm
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="XEvBrnE.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-US-XAc">
+                            <imageView userInteractionEnabled="NO" alpha="0.02" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="XEvBrnE.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZeY-US-XAc">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BT-A6-QpM">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BT-A6-QpM">
                                 <rect key="frame" x="16" y="274" width="382" height="405"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
@@ -252,8 +264,11 @@ In addition, the Exia has a "GN Drive Burst Mode" function that can temporarily 
                             <constraint firstAttribute="trailing" secondItem="ZeY-US-XAc" secondAttribute="trailing" id="sS3-l0-AjJ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="yvj-ur-uPm"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Gundam" image="EXiaSD.png" id="yvj-ur-uPm"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="gundamImageView" destination="ZeY-US-XAc" id="PF7-1h-Gg2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Fq-cl-VeD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -336,17 +351,21 @@ In addition, the Exia has a "GN Drive Burst Mode" function that can temporarily 
                             <constraint firstItem="De3-NZ-b5e" firstAttribute="top" secondItem="7j0-0n-Gq1" secondAttribute="bottom" constant="31" id="vk4-kk-cTL"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Rdx-uf-ZcZ"/>
+                    <tabBarItem key="tabBarItem" title="First" image="first.png" id="Rdx-uf-ZcZ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="txtCounter1" destination="7j0-0n-Gq1" id="W0Q-uv-U7B"/>
+                        <outlet property="txtCounter2" destination="mKS-dO-O4W" id="Vg5-eE-98B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITG-dO-yjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1512" y="-335"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Controller-->
         <scene sceneID="NyY-Zt-Msp">
             <objects>
-                <tabBarController id="0yx-86-tiA" sceneMemberID="viewController">
+                <tabBarController title="Controller" id="0yx-86-tiA" customClass="DEMOTabViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="wFO-Gr-Blg"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="dR7-1B-w0X">
@@ -367,7 +386,11 @@ In addition, the Exia has a "GN Drive Burst Mode" function that can temporarily 
         </scene>
     </scenes>
     <resources>
+        <image name="EXiaSD.png" width="30" height="30"/>
         <image name="XEvBrnE.jpg" width="1680" height="1050"/>
+        <image name="first.png" width="30" height="30"/>
+        <image name="kanjiheaven.png" width="30" height="30"/>
         <image name="samurai-sunset-art.jpg" width="1024" height="1024"/>
+        <image name="second.png" width="30" height="30"/>
     </resources>
 </document>

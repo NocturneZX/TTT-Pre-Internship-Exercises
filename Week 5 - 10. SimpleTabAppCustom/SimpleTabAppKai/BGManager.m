@@ -67,7 +67,7 @@
     
     self.bgPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:backgroundMusicURL error:nil];
     self.bgPlayer.delegate = self;
-    self.bgPlayer.numberOfLoops = 0;	// Loop once
+    self.bgPlayer.numberOfLoops = -1;	// Loop once
 }
 
 - (void)playMusic {

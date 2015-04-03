@@ -32,6 +32,28 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)onePressed:(id)sender
+{
+    NSDictionary *extraInfo = [NSDictionary dictionaryWithObject:@"One" forKey:@"button_name"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Test1" object:self userInfo:extraInfo ];
+}
+
+-(IBAction)twoPressed:(id)sender
+{
+    NSDictionary *extraInfo = [NSDictionary dictionaryWithObject:@"Two" forKey:@"button_name"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"Test2" object:self userInfo:extraInfo ];
+    
+}
+
+
+-(void)receiveNotification:(NSNotification *) notification
+{
+    NSLog(@"Second View Notification Received: %@", [notification name]);
+    
+    NSDictionary *extraInfo = [notification userInfo];
+    [_txtNotify setText:[extraInfo objectForKey:@"button_name"]];
+}
+
 /*
 #pragma mark - Navigation
 

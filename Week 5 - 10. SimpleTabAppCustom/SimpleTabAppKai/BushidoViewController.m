@@ -7,7 +7,7 @@
 //
 
 #import "BushidoViewController.h"
-
+#import "BGManager.h"
 @interface BushidoViewController ()
 
 @end
@@ -17,14 +17,15 @@
 {
     self = [super init];
     if (self) {
-        self.title = @"Bushido";
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+
     }
     return self;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+
 }
 
 - (void)didReceiveMemoryWarning {

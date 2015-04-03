@@ -45,12 +45,12 @@
     
     if ([[notification name] isEqualToString:@"Test1"]) {
         counter1++;
-        _txtCounter1.text = [NSString stringWithFormat:@"%@: %d",
+        _txtCounter1.text = [NSString stringWithFormat:@"The Sun's light has burned Moon's gaze.%@: %d",
                             [extraInfo objectForKey:@"button_name"], counter1];
     }
     else{
         counter2++;
-        _txtCounter2.text = [NSString stringWithFormat:@"%@: %d",
+        _txtCounter2.text = [NSString stringWithFormat:@"The Moon's darknees has extingushed Sun's flames. %@: %d",
                             [extraInfo objectForKey:@"button_name"], counter2];
     }
 }
@@ -63,6 +63,7 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 /*
