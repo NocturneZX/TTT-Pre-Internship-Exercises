@@ -45,7 +45,7 @@ static NSString *CellIdentifier = @"Cell";
     
     [dataAccessObject createOrOpenDBForCompanies];
     [dataAccessObject initWithCompaniesAndProductsUsingSQLite];
-    [dataAccessObject addProductsToCompaniesUsingSQLite];
+    //[dataAccessObject addProductsToCompaniesUsingSQLite];
     self.companyList = [dataAccessObject GetCompaniesUsingSQLite];
 
     self.title = @"Mobile device makers";

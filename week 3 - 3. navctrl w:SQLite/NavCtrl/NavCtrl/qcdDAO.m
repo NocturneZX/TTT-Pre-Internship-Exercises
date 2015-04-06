@@ -57,51 +57,39 @@
     if (sqlite3_open([dbPathString UTF8String], &navCtrlDB) == SQLITE_OK)
     {
         [self.companies removeAllObjects];
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM COMPANY"];
+        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM COMPANY INNER JOIN PRODUCT ON COMPANY.ID = PRODUCT.COMPANYID"];
         const char *query_sql = [querySQL UTF8String];
         int sqlfunc = sqlite3_prepare(navCtrlDB, query_sql, -1, &statement, NULL);
-        
+        NSLog(@"Documents Directory: %@", [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
+
         if (sqlfunc == SQLITE_OK)
         {
+
             while (sqlite3_step(statement) == SQLITE_ROW)
             {
+                NSLog(@"%@",[self sqlite3StmtToString:statement]);
+
+                
                 NSString *compID = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 0)];
                 NSString *compName = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 1)];
                 NSString *compImage = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 2)];
                 
-                Company *company = [[Company alloc]init];
-                [company setCompanyID:[compID integerValue]];
-                [company setCompanyName:compName];
-                [company setCompanyProducts:[NSMutableArray new]];
-                [company setCompanyImage:compImage];
-                [self.companies addObject:company];
+                NSString *productID = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 3)];
+                NSString *productName = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 4)];
+                NSString *productNameRef = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement, 5)];
+                NSString *companyID = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(statement,  6)];
                 
-                [compID release];
-                [compName release];
-                [compImage release];
-            }
-        }
-        else {
-            NSLog(@"Error reading categories. Code: %d, message: '%s'", sqlfunc,sqlite3_errmsg(navCtrlDB));
-        }
-        
-    }
-    
-    sqlite3_stmt *newstatement;
-    if (sqlite3_open([dbPathString UTF8String], &navCtrlDB)==SQLITE_OK)
-    {
-        NSString *querySQL = [NSString stringWithFormat:@"SELECT * FROM PRODUCT"];
-        const char *query_sql = [querySQL UTF8String];
-        int sqlfunc = sqlite3_prepare(navCtrlDB, query_sql, -1, &newstatement, NULL);
-        
-        if (sqlfunc == SQLITE_OK)
-        {
-            while (sqlite3_step(newstatement) == SQLITE_ROW)
-            {
-                NSString *productID = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(newstatement, 0)];
-                NSString *productName = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(newstatement, 1)];
-                NSString *productNameRef = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(newstatement, 2)];
-                NSString *companyID = [[NSString alloc]initWithUTF8String:(const char *)sqlite3_column_text(newstatement,  3)];
+                Company *company = nil;
+                if ([[self.companies lastObject]CompanyID] != [compID integerValue] || self.companies.count == 0) {
+                    company = [[Company alloc]init];
+                    [company setCompanyID:[compID integerValue]];
+                    [company setCompanyName:compName];
+                    [company setCompanyProducts:[NSMutableArray array]];
+                    [company setCompanyImage:compImage];
+
+                }else{
+                    company = [self.companies lastObject];
+                }
                 
                 Product *product = [[Product alloc]init];
                 [product setProductID:[productID integerValue]];
@@ -109,7 +97,20 @@
                 [product setProductReference:productNameRef];
                 [product setCompanyID:[companyID integerValue]];
                 [self.products addObject:product];
-
+                
+                if (company.CompanyID == product.CompanyID) {
+                    [company.CompanyProducts addObject:product];
+                }
+                
+                
+                if ([[self.companies lastObject]CompanyID] != [compID integerValue]) {
+                    [self.companies addObject:company];
+                }
+                
+                
+                [compID release];
+                [compName release];
+                [compImage release];
                 
                 [productID release];
                 [productName release];
@@ -121,6 +122,7 @@
         else {
             NSLog(@"Error reading categories. Code: %d, message: '%s'", sqlfunc,sqlite3_errmsg(navCtrlDB));
         }
+        
     }
 }
 -(void)addProductsToCompaniesUsingSQLite{
@@ -144,7 +146,22 @@
         NSLog(@"Data Deleted");
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Delete" message:@"Data Deleted" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil];
         [alert show];
+    }else{
+        NSLog(@"%s", error);
     }
+}
+
+-(NSMutableString*) sqlite3StmtToString:(sqlite3_stmt*) statement
+{
+    NSMutableString *s = [NSMutableString new];
+    [s appendString:@"{\"statement\":["];
+    for (int c = 0; c < sqlite3_column_count(statement); c++){
+        [s appendFormat:@"{\"column\":\"%@\",\"value\":\"%@\"}",[NSString stringWithUTF8String:(char*)sqlite3_column_name(statement, c)],[NSString stringWithUTF8String:(char*)sqlite3_column_text(statement, c)]];
+        if (c < sqlite3_column_count(statement) - 1)
+            [s appendString:@","];
+    }
+    [s appendString:@"]}"];
+    return s;
 }
 
 @end
