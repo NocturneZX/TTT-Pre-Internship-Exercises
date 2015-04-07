@@ -19,6 +19,7 @@
 		48ED83A31831F15D006943C3 /* DEMOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48ED83A21831F15D006943C3 /* DEMOViewController.m */; };
 		48ED83A61831F15D006943C3 /* DEMOViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48ED83A41831F15D006943C3 /* DEMOViewController.xib */; };
 		48ED83AD18320582006943C3 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 48ED83AC18320582006943C3 /* logo.png */; };
+		4D2C3EE11AD3477C004D46DA /* page.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D2C3EE01AD3477C004D46DA /* page.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		48ED83A21831F15D006943C3 /* DEMOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DEMOViewController.m; sourceTree = "<group>"; };
 		48ED83A51831F15D006943C3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DEMOViewController.xib; sourceTree = "<group>"; };
 		48ED83AC18320582006943C3 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		4D2C3EE01AD3477C004D46DA /* page.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = page.html; path = ../page.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		48ED83901831F15D006943C3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4D2C3EE01AD3477C004D46DA /* page.html */,
 				48ED83AC18320582006943C3 /* logo.png */,
 				48ED83911831F15D006943C3 /* UIWebView-Info.plist */,
 				48ED83921831F15D006943C3 /* InfoPlist.strings */,
@@ -140,7 +143,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Aditya;
 			};
-			buildConfigurationList = 48ED83811831F15D006943C3 /* Build configuration list for PBXProject "UIWebView" */;
+			buildConfigurationList = 48ED83811831F15D006943C3 /* Build configuration list for PBXProject "uiwebview" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -162,6 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2C3EE11AD3477C004D46DA /* page.html in Resources */,
 				48ED83941831F15D006943C3 /* InfoPlist.strings in Resources */,
 				48ED839C1831F15D006943C3 /* Default.png in Resources */,
 				48ED839E1831F15D006943C3 /* Default@2x.png in Resources */,
@@ -289,7 +293,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		48ED83811831F15D006943C3 /* Build configuration list for PBXProject "UIWebView" */ = {
+		48ED83811831F15D006943C3 /* Build configuration list for PBXProject "uiwebview" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48ED83A71831F15D006943C3 /* Debug */,
@@ -305,6 +309,7 @@
 				48ED83AB1831F15D006943C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

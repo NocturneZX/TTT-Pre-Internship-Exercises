@@ -2,13 +2,13 @@
 //  DEMOViewController.h
 //  UIWebView
 //
-//  Created by Aditya on 12/11/13.
-//  Copyright (c) 2013 Aditya. All rights reserved.
+//  Created by  Julio Reyes  on 12/11/13.
+//  Copyright (c) 2013  Julio Reyes . All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface DEMOViewController : UIViewController{
+@interface DEMOViewController : UIViewController<UIWebViewDelegate>{
     IBOutlet UIWebView *webPage;
     IBOutlet UITextField *urlbar;
     IBOutlet UIImageView *imview;
