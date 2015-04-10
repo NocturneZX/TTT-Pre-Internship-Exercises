@@ -13,7 +13,7 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         // insert code here...
-        NSString *dataStr = [NSString stringWithContentsOfFile:@"/Users/adityanarayan/Desktop/Julio Reyes/Week 1 - Introduction/AddressBook/AddressBook/address.csv" encoding:NSUTF8StringEncoding error:nil];
+        NSString *dataStr = [NSString stringWithContentsOfFile:@"/Users/Nocturne/Desktop/TTT-Pre-Internship-Exercises/Week 1 - Introduction/Obj-C/AddressBook/AddressBook/address.csv" encoding:NSUTF8StringEncoding error:nil];
         //specifies the csv file to read - stored in project root directory - and encodes specifies that the format of the file is NSUTF8. Choses not to return an error message if the reading fails
         
         NSArray *array = [dataStr componentsSeparatedByString: @"\n"];
@@ -29,6 +29,8 @@ int main(int argc, const char * argv[]) {
         BOOL isValid = YES;
         for (NSString *person in array) {
             NSArray* info = [person componentsSeparatedByString:@","];
+            NSLog(@"%@", info);
+
             if (info.count >= 2) {
                 Name *newPerson = [[Name alloc]init];
                 [newPerson setFullName:info[0]];
@@ -52,7 +54,7 @@ int main(int argc, const char * argv[]) {
             }
         }
 
-        NSLog(@"%@", addressBookEntry);
+        NSLog(@"%@", addressBookEntry); 
     }
     
 
