@@ -45,7 +45,7 @@ class ViewController: UIViewController {
                     self.presentViewController(alert, animated: true, completion: nil)
                     
                     //5. Convert JSON to Dictionary
-                    let jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
+                    let jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
                     
                     
                     // Now send the JSON result to our delegate object

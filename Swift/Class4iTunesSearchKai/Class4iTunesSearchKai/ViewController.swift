@@ -14,7 +14,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var sortButton: UIButton!
     
-    var items: [String] = [];
+    var items: [String] = []
+    var imageURLCache:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,21 +73,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     self.presentViewController(alert, animated: true, completion: nil)
 
                     //5. Convert JSON to Dictionary
-                    let jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
-                    
-                    var albumName = jsonResult["results.collectionName"] as? String
-                     println("\(albumName)")
+                    let jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &error) as! NSDictionary
 
-//                    self.items.append(albumName!)
-//                   
-//                    var albumKey = "collectionName"
-
-                    // Now send the JSON result to our delegate object
-//                    jsonResult.enumerateKeysAndObjectsUsingBlock{(key, obj, stop) -> Void in
-//                        var albumName = obj.valueForKey("collectionName") as? String
-//                        println("\(albumName)")
-//                        
-//                    }
                     
                     if error != nil{
                         println("HTTP Error: \(error?.localizedDescription)")
@@ -96,9 +84,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                         println("\n\n-------- Response from iTunes --------\n\n")
                         println(jsonResult)
                         
+                        if let results = jsonResult["results"] as? NSArray{
+                            for result in results{
+                                if let albumName = result["collectionName"] as? NSString{
+                                    println("\(albumName)")
+                                    self.items.append(albumName as String)
+                                }
+                                if let albumIMG = result["artworkUrl100"] as? NSString{
+                                    //println("\(albumIMG)")
+                                    self.imageURLCache.append(albumIMG as String)
+                                }
+                            }
+                        }
                         
+                        println("There are this number of albums. \(self.items.count)")
                         
-    
+                        self.iTunesTableView.reloadData() 
                         
                     }//else
                     
@@ -118,9 +119,35 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        var cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
         
         cell.textLabel?.text = self.items[indexPath.row]
+        
+        // Image Async
+        if(self.imageURLCache.count > 0){
+            // If the image does not exist, we need to download it
+            var imgURL: NSURL = NSURL(string: self.imageURLCache[indexPath.row])!
+            var image: UIImage?
+            
+            // Download an NSData representation of the image at the URL
+            let request: NSURLRequest = NSURLRequest(URL: imgURL)
+            NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+                if error == nil {
+                    image = UIImage(data: data)
+                    
+                    // Store the image in to our cache
+                    dispatch_async(dispatch_get_main_queue(), {
+                        if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
+                            cellToUpdate.imageView?.image = image
+                            self.iTunesTableView.reloadData()
+                        }
+                    })
+                }
+                else {
+                    println("Error: \(error.localizedDescription)")
+                }
+            })
+        }
         
         return cell
     }

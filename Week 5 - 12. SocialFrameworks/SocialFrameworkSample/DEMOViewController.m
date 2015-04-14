@@ -24,9 +24,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
+    [FBSDKProfile enableUpdatesOnAccessTokenChange:YES];
+
     // In your viewDidLoad method: Set permisiions for the FBSDKLoginButton
     self.loginButton.readPermissions = @[@"public_profile", @"email", @"user_friends"];
+    
+    if ([FBSDKAccessToken currentAccessToken]) {
+        // User is logged in, do work such as go to next view controller.
+        
+        NSLog(@"Logged IN: %@", [FBSDKAccessToken currentAccessToken]);
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,5 +85,29 @@
     }
 }
 
+#pragma mark - Facebook Login Button methods
+/*!
+ @abstract Sent to the delegate when the button was used to login.
+ @param loginButton the sender
+ @param result The results of the login
+ @param error The error (if any) from the login
+ */
+- (void)  loginButton:(FBSDKLoginButton *)loginButton
+didCompleteWithResult:(FBSDKLoginManagerLoginResult *)result
+                error:(NSError *)error{
+    NSLog(@"%@", result.token);
+}
 
+/*!
+ @abstract Sent to the delegate when the button was used to logout.
+ @param loginButton The button that was clicked.
+ */
+- (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton{
+    NSLog(@"Logged out.");
+}
+
+#pragma mark - Twitter Methods
+- (IBAction)tweet:(id)sender {
+    
+}
 @end
