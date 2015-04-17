@@ -62,11 +62,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: { action in
                         switch action.style{
                         case .Default:
-                            println("default")
+                            println("Default")
                         case .Cancel:
                             println("Cancel")
                         case .Destructive:
-                            println("ASSPLODE!")
+                            println("***PLODE!")
                         }
                     }))
                     

@@ -9,5 +9,5 @@
 import UIKit
 
 class FlickrCVCell: UICollectionViewCell {
-    
+    @IBOutlet weak var FlickrCVImageView: UIImageView!
 }

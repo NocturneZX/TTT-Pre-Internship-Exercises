@@ -14,40 +14,16 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPb-4H-Jhc">
-                                <rect key="frame" x="139" y="105" width="135" height="30"/>
-                                <state key="normal" title="iTunes Search">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYj-mk-R6g"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSp-RB-2uE">
-                                <rect key="frame" x="166" y="38" width="81" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="8sS-p3-AHG"/>
-                                    <constraint firstAttribute="height" constant="21" id="ceh-WQ-OgS"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8sS-p3-AHG"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xci-4f-MSs">
-                                <rect key="frame" x="85" y="67" width="244" height="30"/>
+                                <rect key="frame" x="85" y="67" width="150" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYE-tc-Jk8">
-                                <rect key="frame" x="352" y="105" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYE-tc-Jk8">
+                                <rect key="frame" x="274" y="105" width="30" height="30"/>
                                 <state key="normal" title="Sort">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -56,7 +32,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="agk-7T-5cD">
-                                <rect key="frame" x="0.0" y="143" width="414" height="593"/>
+                                <rect key="frame" x="0.0" y="143" width="320" height="337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="w9v-r8-rbt">
@@ -72,41 +48,48 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="pcV-dU-jTN"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPb-4H-Jhc">
+                                <rect key="frame" x="85" y="105" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="21Z-Vw-xFe"/>
+                                </constraints>
+                                <state key="normal" title="iTunes Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYj-mk-R6g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.73305958807479099" green="1" blue="0.2717430681889712" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="xci-4f-MSs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3VI-cb-PRP"/>
-                            <constraint firstItem="lSp-RB-2uE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="362" id="5EK-0k-csS"/>
-                            <constraint firstItem="lSp-RB-2uE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="150" id="FjP-Jg-aC4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lSp-RB-2uE" secondAttribute="trailing" constant="151" id="IfZ-4X-b8n"/>
+                            <constraint firstItem="xci-4f-MSs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="CK9-yX-j5Q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xci-4f-MSs" secondAttribute="trailing" constant="69" id="Gux-j4-4Ow"/>
+                            <constraint firstItem="LYE-tc-Jk8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="Hal-ku-jdg"/>
                             <constraint firstItem="agk-7T-5cD" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="K0e-wI-Z3o"/>
-                            <constraint firstItem="lSp-RB-2uE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="KDT-MU-X3w"/>
-                            <constraint firstItem="xci-4f-MSs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="69" id="Knr-IJ-Nlr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lSp-RB-2uE" secondAttribute="trailing" constant="151" id="Llq-7o-vme"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DPb-4H-Jhc" secondAttribute="trailing" constant="124" id="N4y-U3-9qy"/>
-                            <constraint firstItem="lSp-RB-2uE" firstAttribute="centerX" secondItem="xci-4f-MSs" secondAttribute="centerX" id="O6K-lv-NSP"/>
+                            <constraint firstItem="agk-7T-5cD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="KmS-Bx-H1T"/>
+                            <constraint firstItem="LYE-tc-Jk8" firstAttribute="leading" secondItem="DPb-4H-Jhc" secondAttribute="trailing" constant="274" id="M0A-em-lbj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="agk-7T-5cD" secondAttribute="trailing" constant="-16" id="PFq-Io-8TI"/>
                             <constraint firstItem="DPb-4H-Jhc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="139" id="PSy-a0-ViR"/>
-                            <constraint firstItem="agk-7T-5cD" firstAttribute="top" secondItem="DPb-4H-Jhc" secondAttribute="bottom" constant="8" symbolic="YES" id="RFS-et-39t"/>
-                            <constraint firstItem="LYE-tc-Jk8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Rua-Yh-nVY"/>
-                            <constraint firstItem="xci-4f-MSs" firstAttribute="top" secondItem="lSp-RB-2uE" secondAttribute="bottom" constant="8" id="Wff-PM-cWd"/>
-                            <constraint firstItem="agk-7T-5cD" firstAttribute="top" secondItem="LYE-tc-Jk8" secondAttribute="bottom" constant="8" id="Z1B-9a-D6N"/>
-                            <constraint firstItem="agk-7T-5cD" firstAttribute="centerX" secondItem="DPb-4H-Jhc" secondAttribute="centerX" id="dWt-EB-qEf"/>
-                            <constraint firstItem="LYE-tc-Jk8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="dra-RG-hh6"/>
-                            <constraint firstItem="DPb-4H-Jhc" firstAttribute="top" secondItem="xci-4f-MSs" secondAttribute="bottom" constant="8" id="erI-B4-Tvs"/>
-                            <constraint firstItem="lSp-RB-2uE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="150" id="kib-Xf-JcC"/>
+                            <constraint firstItem="LYE-tc-Jk8" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Zu3-Wd-hRb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DPb-4H-Jhc" secondAttribute="trailing" constant="124" id="dqS-8i-tGk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DPb-4H-Jhc" secondAttribute="trailing" constant="69" id="ggJ-K1-G6b"/>
+                            <constraint firstItem="DPb-4H-Jhc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="69" id="jCR-G0-3se"/>
+                            <constraint firstItem="agk-7T-5cD" firstAttribute="top" secondItem="DPb-4H-Jhc" secondAttribute="bottom" constant="8" id="oma-GM-hZK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="agk-7T-5cD" secondAttribute="bottom" id="sDs-da-ZYF"/>
+                            <constraint firstItem="xci-4f-MSs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="69" id="t6N-hu-mGo"/>
+                            <constraint firstItem="DPb-4H-Jhc" firstAttribute="top" secondItem="xci-4f-MSs" secondAttribute="bottom" constant="8" id="to1-Hb-4vt"/>
                             <constraint firstItem="agk-7T-5cD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tsW-DL-ttB"/>
-                            <constraint firstItem="LYE-tc-Jk8" firstAttribute="leading" secondItem="DPb-4H-Jhc" secondAttribute="trailing" constant="78" id="vJy-cd-idw"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="5EK-0k-csS"/>
-                                <exclude reference="Llq-7o-vme"/>
-                                <exclude reference="O6K-lv-NSP"/>
-                                <exclude reference="kib-Xf-JcC"/>
+                                <exclude reference="PSy-a0-ViR"/>
+                                <exclude reference="dqS-8i-tGk"/>
+                                <exclude reference="M0A-em-lbj"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="iTunesTableView" destination="agk-7T-5cD" id="b6F-My-rqt"/>
                         <outlet property="searchButton" destination="DPb-4H-Jhc" id="2HB-UI-otB"/>
@@ -116,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="82.5" y="428.5"/>
+            <point key="canvasLocation" x="82" y="428"/>
         </scene>
     </scenes>
 </document>

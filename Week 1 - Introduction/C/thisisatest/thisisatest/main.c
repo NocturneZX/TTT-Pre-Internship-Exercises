@@ -10,6 +10,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+#define TRUE 1
+#define FALSE 0
 int main(int argc, const char * argv[]) {
     
     char* testStr = "This is a test";
@@ -22,7 +24,7 @@ int main(int argc, const char * argv[]) {
     }
     
     size_t testStrlen = strlen(testStr);
-    int strUpdated = 0; // Really is bool
+    int strUpdated = FALSE; // Really is bool
     
     for (int i = 0; i <= testStrlen; i++) {
         if (testStr[i] == 't' && testStr[i+1] == 'e') {
@@ -37,10 +39,10 @@ int main(int argc, const char * argv[]) {
             }
             
             i = newIndex - 1; // Record the new index and resume the loop to the new index
-            strUpdated = 1;
+            strUpdated = TRUE;
             
         }else{
-            if (strUpdated == 1) { // When the index is updated, it will add the remaining two letters from the original string to the new one.
+            if (strUpdated == TRUE) { // When the index is updated, it will add the remaining two letters from the original string to the new one.
                 int buffer = i - 1; // Since new string is larger, use a buffer to grab the char from original string.
                 newString[i] = testStr[buffer];
             }else{
