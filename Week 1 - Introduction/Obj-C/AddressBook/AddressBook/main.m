@@ -54,7 +54,8 @@ int main(int argc, const char * argv[]) {
             }
         }
 
-        NSLog(@"%@", addressBookEntry); 
+        Name *currentPerson = [addressBookEntry objectForKey:@"Julio Reyes"];
+        NSLog(@"%@", currentPerson.address);
     }
     
 

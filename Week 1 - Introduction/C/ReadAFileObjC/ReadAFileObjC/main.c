@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
     //    printf("Enter the name of file you wish to see: \n");
     //    gets(outFileName);
     
-    ofp = fopen("/Users/adityanarayan/Desktop/Julio Reyes/Week 1 - Introduction/ReadAFileObjC/ReadAFileObjC/AppDelegate.m", mode); // Open file
+    ofp = fopen("/Users/Nocturne/Desktop/TTT-Pre-Internship-Exercises/Week 1 - Introduction/C/ReadAFileObjC/ReadAFileObjC/AppDelegate.m", mode); // Open file
     
     if(ofp == NULL ) // Check if file exists.
     {
