@@ -51,7 +51,7 @@
 -(IBAction)updateChildLocation:(id) sender{
     //Set the ID to update
     self.userID = self.userName.text;
-    NSDictionary *childDict = @{@"utf8": @"✓", @"authenticity_token":@"EvZva3cKnzo3Y0G5R3NktucCr99o/2UWOPVAmJYdBOc=", @"user":@{@"username":self.userID,@"current_lat":self.latitude,@"current_longitude":self}, @"commit":@"Create User", @"action":@"update", @"controller":@"users"};
+    NSDictionary *childDict = @{@"utf8": @"✓", @"authenticity_token":@"EvZva3cKnzo3Y0G5R3NktucCr99o/2UWOPVAmJYdBOc=", @"user":@{@"username":self.userID,@"current_lat":self.latitude,@"current_longitude":self.longitude}, @"commit":@"Create User", @"action":@"update", @"controller":@"users"};
     
     NSLog(@"%@", childDict);
     
@@ -190,7 +190,7 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite{
     NSDate *eventDate = newLocation.timestamp;
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     
-    if (abs(howRecent) < 5.0) {
+    if (fabs(howRecent) < 5.0) {
         // Do stuff
         self.locationLabel.text = [NSString stringWithFormat:@"latitude %+.6f, longitude %+.6f\n",
                                    newLocation.coordinate.latitude,

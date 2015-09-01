@@ -21,6 +21,8 @@ isStringEqual(first, second)
 
 isStringEqual(first, copyfirst)
 
+
+
 var num = 0
 do{
     println(num++)

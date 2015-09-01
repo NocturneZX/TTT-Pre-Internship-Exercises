@@ -46,20 +46,20 @@ class CompanyViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell;
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell;
         var company = self.companies![indexPath.row];
         var na = "N/A";
         var emptyString = "";
-        cell.textLabel.text = "\(company.name!)";
+        cell.textLabel!.text = "\(company.name!)";
         var image = UIImage(named:"\(company.name!).jpeg");
-        cell.imageView.image = image;
+        cell.imageView!.image = image;
         
         return cell;
         
  
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let productViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductViewController") as ProductViewController;
+        let productViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ProductViewController") as! ProductViewController;
         productViewController.company = self.companies![indexPath.row];
         self.navigationController!.pushViewController(productViewController, animated: true);
         

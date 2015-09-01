@@ -154,7 +154,7 @@ static NSString *defaultLocation = @"Flatiron";
     NSDate *eventDate = newLocation.timestamp;
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     
-    if (abs(howRecent) < 5.0) {
+    if (fabs(howRecent) < 5.0) {
         // Do stuff
         [self findAllRestaurants];
     }

@@ -23,7 +23,7 @@ int main(int argc, const char * argv[]) {
     int j = 0;
     int countryIndex = 0;
     
-    for (i = i; i < elements; i++) {
+    for (; i < elements; i++) {
         if ((countries[i] == ',' && countries[i+1] == ' ')
             || i == elements - 1) {
 
@@ -31,7 +31,7 @@ int main(int argc, const char * argv[]) {
     
             int lettercount = 0; // Counter of letters
             
-            for (j = j; j < i; j++) { // Iterate through each country
+            for (; j < i; j++) { // Iterate through each country
                 newCountry[lettercount] = countries[j];
                 lettercount++;
             }newCountry[lettercount] = '\0'; // break

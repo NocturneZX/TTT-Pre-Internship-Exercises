@@ -238,7 +238,7 @@ totalBytesExpectedToWrite:(NSInteger)totalBytesExpectedToWrite{
     NSDate *eventDate = newLocation.timestamp;
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     
-    if (abs(howRecent) < 5.0) {
+    if (fabs(howRecent) < 5.0) {
         // Do stuff
         self.userLatitude.text = [NSString stringWithFormat:@"%f", newLocation.coordinate.latitude];
         self.userLongitude.text = [NSString stringWithFormat:@"%f", newLocation.coordinate.longitude];

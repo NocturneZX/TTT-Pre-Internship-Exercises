@@ -25,10 +25,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         flickrCollectionView!.registerClass(FlickrCVCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         let flickrDownloader: FlickrDataDownloader =  FlickrDataDownloader()
-        
+
         flickrDownloader.getArrayOfPhotoObjectsforTheSearchTerm("Gundam", completion: { (searchString:String!, flickrPhotos:NSMutableArray!, error:NSError!) -> () in
-            self.photosets = NSMutableArray(array: flickrPhotos)
             
+            self.photosets = NSMutableArray(array: flickrPhotos)
+          
             dispatch_async(dispatch_get_main_queue(), {
 
                 self.flickrCollectionView.reloadData()
